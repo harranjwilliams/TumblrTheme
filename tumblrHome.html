@@ -19,27 +19,29 @@
       </header>
       <section class="hjw-about-me">
       </section>
-      <section class="hjw-posts">
-        <article></article> <!-- text -->
-        <article></article> <!-- photo -->
-        <article></article> <!-- panorama -->
-        <article></article> <!-- photoset -->
-        <article></article> <!-- quote -->
-        <article></article> <!-- link -->
-        <article></article> <!-- chat -->
-        <article></article> <!-- audio -->
-        <article></article> <!-- video -->
-        <article></article> <!-- answer -->
-      </section>
+      {block:Posts}
+        <section class="hjw-posts">
+          {block:Text}<article></article>{/block:Text}
+          {block:Photo}<article></article>{/block:Photo}
+          {block:Panorama}<article></article>{/block:Panorama}
+          {block:Photoset}<article></article>{/block:Photoset}
+          {block:Quote}<article></article>{/block:Quote}
+          {block:Link}<article></article>{/block:Link}
+          {block:Chat}<article></article>{/block:Chat}
+          {block:Audio}<article></article>{/block:Audio}
+          {block:Video}<article></article>{/block:Video}
+          {block:Answer}<article></article>{/block:Answer}
+        </section>
+      {/block:Posts}
       <footer>
       </footer>
-      <!-- Optional JavaScript -->
-      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-      <!--
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-      -->
-    </div>
+    </div> <!-- content container -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    -->
   </body>
 </html>
