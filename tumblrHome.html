@@ -98,11 +98,33 @@
             </article>
           {/block:Link}
           <!-- ************************************************************ -->
-          {block:Chat}<article></article>{/block:Chat}
+          {block:Chat}
+            <article>
+              {block:Title}{Title}{/block:Title}
+              <table>
+                {block:Lines}
+                <tr>
+                  <th>{block:Label}{Label}{/block:Label}</th>
+                  <td>{Line}</td>
+                </tr>
+                {/block:Lines}
+              </table>
+            </article>
+          {/block:Chat}
           <!-- ************************************************************ -->
-          {block:Audio}<article></article>{/block:Audio}
+          {block:Audio}
+            <article>
+              {AudioPlayer}
+              {block:Caption}{Caption}{/block:Caption}
+            </article>
+          {/block:Audio}
           <!-- ************************************************************ -->
-          {block:Video}<article></article>{/block:Video}
+          {block:Video}
+            <article>
+              {Video-500}
+        			{block:Caption}{Caption}{/block:Caption}
+            </article>
+          {/block:Video}
           <!-- ************************************************************ -->
           {block:Answer}<article></article>{/block:Answer}
           <!-- ************************************************************ -->
