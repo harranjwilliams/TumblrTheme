@@ -18,7 +18,7 @@
       <header>
       </header>
       <section class="hjw-about-me">
-      </section>
+      </section> <!-- about me section -->
       {block:Posts}
         <section class="hjw-posts">
           <!-- ************************************************************ -->
@@ -30,60 +30,73 @@
           {/block:Text}
           <!-- ************************************************************ -->
           {block:Photo}
-          <article>
-            {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
-            {block:HighRes}<a href="{PhotoURL-HighRes}">View in High-Res</a>{/block:HighRes}
-            <!-- Exchangeable image file format. Not used in JPEG, PNG, GIF or 2000 -->
-            {block:Exif}
-              <ul>
-                {block:Camera}<li>Camera: {Camera}</li>{/block:Camera}
-                {block:Aperture}<li>Aperture: {Aperture}</li>{/block:Aperture}
-                {block:Exposure}<li>Exposure: {Exposure}</li>{/block:Exposure}
-                {block:FocalLength}<li>Focal Length: {FocalLength}</li>{/block:FocalLength}
-              </ul>
-            {/block:Exif}
-      			{block:Caption}{Caption}{/block:Caption}
-          </article>
+            <article>
+              {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
+              {block:HighRes}<a href="{PhotoURL-HighRes}">View in High-Res</a>{/block:HighRes}
+              <!-- Exchangeable image file format. Not used in JPEG, PNG, GIF or 2000 -->
+              {block:Exif}
+                <ul>
+                  {block:Camera}<li>Camera: {Camera}</li>{/block:Camera}
+                  {block:Aperture}<li>Aperture: {Aperture}</li>{/block:Aperture}
+                  {block:Exposure}<li>Exposure: {Exposure}</li>{/block:Exposure}
+                  {block:FocalLength}<li>Focal Length: {FocalLength}</li>{/block:FocalLength}
+                </ul>
+              {/block:Exif}
+        			{block:Caption}{Caption}{/block:Caption}
+            </article>
           {/block:Photo}
           <!-- ************************************************************ -->
           {block:Panorama}
-          <article>
-            {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />{LinkCloseTag}
-            {block:HighRes}<a href="{PhotoURL-HighRes}">View in High-Res</a>{/block:HighRes}
-            <!-- Exchangeable image file format. Not used in JPEG, PNG, GIF or 2000 -->
-            {block:Exif}
-              <ul>
-                {block:Camera}<li>Camera: {Camera}</li>{/block:Camera}
-                {block:Aperture}<li>Aperture: {Aperture}</li>{/block:Aperture}
-                {block:Exposure}<li>Exposure: {Exposure}</li>{/block:Exposure}
-                {block:FocalLength}<li>Focal Length: {FocalLength}</li>{/block:FocalLength}
-              </ul>
-            {/block:Exif}
-      			{block:Caption}{Caption}{/block:Caption}
-          </article>
+            <article>
+              {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />{LinkCloseTag}
+              {block:HighRes}<a href="{PhotoURL-HighRes}">View in High-Res</a>{/block:HighRes}
+              <!-- Exchangeable image file format. Not used in JPEG, PNG, GIF or 2000 -->
+              {block:Exif}
+                <ul>
+                  {block:Camera}<li>Camera: {Camera}</li>{/block:Camera}
+                  {block:Aperture}<li>Aperture: {Aperture}</li>{/block:Aperture}
+                  {block:Exposure}<li>Exposure: {Exposure}</li>{/block:Exposure}
+                  {block:FocalLength}<li>Focal Length: {FocalLength}</li>{/block:FocalLength}
+                </ul>
+              {/block:Exif}
+        			{block:Caption}{Caption}{/block:Caption}
+            </article>
           {/block:Panorama}
           <!-- ************************************************************ -->
           {block:Photoset}
-          <article>
-            {block:Photos}
-            <img src="{PhotoURL-500}" width="{PhotoWidth-500}"height="{PhotoHeight-500}" />
-            {block:Caption}{Caption}{/block:Caption}
-            {block:Exif}
-              <ul>
-                {block:Camera}<li>Camera: {Camera}</li>{/block:Camera}
-                {block:Aperture}<li>Aperture: {Aperture}</li>{/block:Aperture}
-                {block:Exposure}<li>Exposure: {Exposure}</li>{/block:Exposure}
-                {block:FocalLength}<li>Focal Length: {FocalLength}</li>{/block:FocalLength}
-              </ul>
-            {/block:Exif}
-            {/block:Photos}
-            {block:Caption}{Caption}{/block:Caption}
-          </article>
+            <article>
+              {block:Photos}
+              <img src="{PhotoURL-500}" width="{PhotoWidth-500}"height="{PhotoHeight-500}" />
+              {block:Caption}{Caption}{/block:Caption}
+              {block:Exif}
+                <ul>
+                  {block:Camera}<li>Camera: {Camera}</li>{/block:Camera}
+                  {block:Aperture}<li>Aperture: {Aperture}</li>{/block:Aperture}
+                  {block:Exposure}<li>Exposure: {Exposure}</li>{/block:Exposure}
+                  {block:FocalLength}<li>Focal Length: {FocalLength}</li>{/block:FocalLength}
+                </ul>
+              {/block:Exif}
+              {/block:Photos}
+              {block:Caption}{Caption}{/block:Caption}
+            </article>
           {/block:Photoset}
           <!-- ************************************************************ -->
-          {block:Quote}<article></article>{/block:Quote}
+          {block:Quote}
+            <article>
+              {Quote}
+              {block:Source}<br>&mdash;{Source}{/block:Source}
+            </article>
+          {/block:Quote}
           <!-- ************************************************************ -->
-          {block:Link}<article></article>{/block:Link}
+          {block:Link}
+            <article>
+              <a href="{URL}" {Target}>{Name}</a>
+              {block:Thumbnail}
+                {Thumbnail}
+              {/block:Thumbnail}
+        			{block:Description}{Description}{/block:Description}
+            </article>
+          {/block:Link}
           <!-- ************************************************************ -->
           {block:Chat}<article></article>{/block:Chat}
           <!-- ************************************************************ -->
@@ -93,7 +106,7 @@
           <!-- ************************************************************ -->
           {block:Answer}<article></article>{/block:Answer}
           <!-- ************************************************************ -->
-        </section>
+        </section> <!-- posts section -->
       {/block:Posts}
       <footer>
       </footer>
