@@ -21,8 +21,28 @@
       </section>
       {block:Posts}
         <section class="hjw-posts">
-          {block:Text}<article></article>{/block:Text}
-          {block:Photo}<article></article>{/block:Photo}
+          {block:Text}
+            <article>
+              {block:Title}{Title}{/block:Title}
+              {Body}
+            </article>
+          {/block:Text}
+
+          {block:Photo}
+          <article>
+            {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
+            {block:HighRes}<a href="{PhotoURL-HighRes}">View in High-Res</a>{/block:HighRes}
+            {block:Exif}
+              <ul>
+                {block:Camera}<li>Camera: {Camera}</li>{/block:Camera}
+                {block:Aperture}<li>Aperture: {Aperture}</li>{/block:Aperture}
+                {block:Exposure}<li>Exposure: {Exposure}</li>{/block:Exposure}
+                {block:FocalLength}<li>Focal Length: {FocalLength}</li>{/block:FocalLength}
+              </ul>
+            {/block:Exif}
+      			{block:Caption}{Caption}{/block:Caption}
+          </article>
+          {/block:Photo}
           {block:Panorama}<article></article>{/block:Panorama}
           {block:Photoset}<article></article>{/block:Photoset}
           {block:Quote}<article></article>{/block:Quote}
