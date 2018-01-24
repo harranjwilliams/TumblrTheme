@@ -1,91 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Font Awesome code to use icons via CDN -->
-  <script src="https://use.fontawesome.com/0afca33ble.js"></script>
-  <!-- Character encoding for this HTML document -->
-  <meta charset="utf-8">
-  <!-- Compatible with Microsoft Edge Browser -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- Designed for mobile devices and is responsive -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <!-- Font Awesome code to use icons via CDN -->
+    <script src="https://use.fontawesome.com/0afca33ble.js"></script>
+    <!-- Character encoding for this HTML document -->
+    <meta charset="utf-8">
+    <!-- Compatible with Microsoft Edge Browser -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Designed for mobile devices and is responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>{Title}</title>
+    <title>{Title}</title>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css?family=Balthazar" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Balthazar" rel="stylesheet">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53649421-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53649421-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
+      function gtag() {
+        dataLayer.push(arguments);
+      }
 
-    gtag('js', new Date());
-    gtag('config', 'UA-53649421-1');
-  </script>
-  <!-- END Global site tag (gtag.js) - Google Analytics -->
+      gtag('js', new Date());
+      gtag('config', 'UA-53649421-1');
+    </script>
+    <!-- END Global site tag (gtag.js) - Google Analytics -->
 
-  <style>
-    body {
-      font-family: 'Balthazar', serif;
-    }
+    <style>
+      body {
+        font-family: 'Balthazar', serif;
+      }
 
-    header {
-      background: #000;
-    }
+      header {
+        background: #000;
+      }
 
-  </style>
-</head>
+    </style>
+  </head>
   <body>
+    <header class="hjw-header">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Col 1 -->
+          <div class="col">
+            <img class="avatar float-left pr-1" src="{PortraitURL-30}">
+            <h4><a href="{BlogURL}">{Title}</a></h4>
+          </div> <!-- col 1 -->
+          <!-- Col 2 -->
+          <div class="col text-right">
+            <ul class="list-inline text-light">
+              <li class="list-inline-item">Home</li>
+              <li class="list-inline-item">About</li>
+              <li class="list-inline-item">Gear</li>
+              <li class="list-inline-item">Contact</li>
+            </ul>
+          </div> <!-- col 2 -->
+            <!-- Col 3 -->
+          <div class="col text-right">
+            <ul class="list-inline text-light">
+              <li class="list-inline-item"><span class="fa fa-facebook fa-lg" aria-hidden="true"></span></li>
+              <li class="list-inline-item"><span class="fa fa-google-plus fa-lg" aria-hidden="true"></span></li>
+              <li class="list-inline-item"><span class="fa fa-instagram fa-lg" aria-hidden="true"></span></li>
+              <li class="list-inline-item"><span class="fa fa-twitter fa-lg" aria-hidden="true"></span></li>
+              <li class="list-inline-item"><span class="fa fa-youtube fa-lg" aria-hidden="true"></span></li>
+            </ul>
+          </div> <!-- col 3 -->
+        </div> <!-- row -->
+      </div> <!-- container -->
+    </header> <!-- hjw-header -->
+
     <div class="container">
-      <header class="hjw-header">
-        <div class="container">
-          <div class="row align-items-center">
-            <!-- Col 1 -->
-            <div class="col bg-danger">
-              <img class="avatar" src="{PortraitURL-128}">
-              <h1><a href="{BlogURL}">{Title}</a></h1>
-              {block:Description}
-                <h2>{Description}</h2>
-              {/block:Description}
-            </div> <!-- col 1 -->
-            <!-- Col 2 -->
-            <div class="col bg-warning">
-              <!-- Col 2 Row 1 -->
-              <div class="row">
-                <div class="col">
-                  <ul class="list-inline">
-                    <li class="list-inline-item">Home</li>
-                    <li class="list-inline-item">About</li>
-                    <li class="list-inline-item">Gear</li>
-                    <li class="list-inline-item">Contact</li>
-                  </ul>
-                </div>
-              </div> <!-- col 2 row 1 -->
-              <!-- Col 2 Row 2 -->
-              <div class="row">
-                <div class="col">
-                  <ul class="list-inline">
-                    <li class="list-inline-item"><span class="fa fa-facebook fa-lg" aria-hidden="true"></span></li>
-                    <li class="list-inline-item"><span class="fa fa-google-plus fa-lg" aria-hidden="true"></span></li>
-                    <li class="list-inline-item"><span class="fa fa-instagram fa-lg" aria-hidden="true"></span></li>
-                    <li class="list-inline-item"><span class="fa fa-twitter fa-lg" aria-hidden="true"></span></li>
-                    <li class="list-inline-item"><span class="fa fa-youtube fa-lg" aria-hidden="true"></span></li>
-                  </ul>
-                </div>
-              </div> <!-- col 2 row 2 -->
-            </div> <!-- col 2 -->
-          </div> <!-- row -->
-        </div> <!-- container -->
-      </header> <!-- hjw-header -->
       <section class="hjw-about-me">
       </section> <!-- about me section -->
       {block:Posts}
