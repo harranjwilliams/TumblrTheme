@@ -42,6 +42,18 @@
         background: #000;
       }
 
+      .wrapper-overlay {
+        width: 100vw;
+        height: calc(100vh - 5rem);
+        min-height: calc(100vh - 5rem);
+        position: absolute;
+        top: 5rem;
+        z-index: -10;
+        opacity: 0;
+        transition: opacity 250ms, ease-out;
+        overflow-y: scroll;
+      }
+
     </style>
   </head>
   <body>
@@ -55,16 +67,20 @@
           </div> <!-- col 1 -->
           <!-- Col 2 -->
           <div class="col text-light text-right">
-            <span class="fa fa-laptop px-1" aria-hidden="true"></span>
-            <div class="dropdown show">
-              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-bars px-1" aria-hidden="true"></span></a>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">Home</a>
-                <a class="dropdown-item" href="#">About</a>
-                <a class="dropdown-item" href="#">Gear</a>
-                <a class="dropdown-item" href="#">Contact</a>
+            <nav>
+              <a href="#social-overlay">
+                <span class="fa fa-laptop px-1" aria-hidden="true"></span>
+              </a>
+              <div class="dropdown">
+                <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-bars px-1" aria-hidden="true"></span></a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="#">Home</a>
+                  <a class="dropdown-item" href="#">About</a>
+                  <a class="dropdown-item" href="#">Gear</a>
+                  <a class="dropdown-item" href="#">Contact</a>
+                </div>
               </div>
-            </div>
+            </nav>
           </div> <!-- col 2 -->
         </div> <!-- row -->
       </div> <!-- container -->
@@ -205,6 +221,12 @@
       {/block:Posts}
       <footer>
       </footer>
+      <div id="social-overlay" class="wrapper-overlay">
+        <div class="container">
+          <div class="row">
+          </div> <!-- row -->
+        </div> <!-- container -->
+      </div> <!-- wrapper-overlay -->
     </div> <!-- content container -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
