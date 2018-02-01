@@ -54,6 +54,11 @@
         overflow-y: scroll;
       }
 
+      .wrapper-overlay .visible {
+         z-index: 2;
+         opacity: 1;
+      }
+
     </style>
   </head>
   <body>
@@ -68,7 +73,7 @@
           <!-- Col 2 -->
           <div class="col text-light text-right">
             <nav>
-              <a href="#social-overlay">
+              <a href="#social-overlay" class="widgets-overlay-link">
                 <span class="fa fa-laptop px-1" aria-hidden="true"></span>
               </a>
               <div class="dropdown">
@@ -228,10 +233,22 @@
         </div> <!-- container -->
       </div> <!-- wrapper-overlay -->
     </div> <!-- content container -->
-    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
+    <script type="text/javascript">
+      $("document").ready(function() {
+        var t = $("#top");
+        var e = $(".widgets-overlay-link");
+        $(e).click(function(e) {
+          e.preventDefault();
+          var i = $(this).attr("href");
+          $(i).toggleClass("visible");
+          $(t).toggleClass("has-overlay-visible").delay(500).animate({scrollTop:0},800);
+        })
+      });
+    </script>
   </body>
 </html>
