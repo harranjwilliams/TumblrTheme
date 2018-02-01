@@ -38,55 +38,34 @@
         font-family: 'Balthazar', serif;
       }
 
-      header {
-        background: #000;
+      header, .wrapper-overlay {
+        background: #000000;
       }
 
-      .wrapper-overlay .visible {
-        top: 10rem;
+      .wrapper-overlay.visible { top: 10rem; }
+
+      .wrapper-overlay .widget { overflow: auto; }
+
+      .wrapper-overlay { width: 100vw; height: calc ( 100vh - 5rem ); min-height: calc( 100vh - 5rem ); position: absolute; top: 5rem; z-index: -10; opacity: 0; transition: opacity 250ms ease-out; overflow-y: scroll; }
+
+      @media only screen and (min-width: 768px) {
+        .wrapper-overlay {
+          top: 7rem;
+          min-height: calc( 100vh - 7rem );
+        }
       }
 
-      .wrapper-overlay {
-        overflow: auto;
+      .wrapper-overlay.visible {
+        z-index: 2;
+        opacity: 1;
       }
 
-      .wrapper-overlay {
-        width: 100vw;
-        height: calc( 100vh - 5rem );
-        min-height: calc( 100vh - 5rem );
-        position: absolute;
-        top: 5rem;
-        z-index: -10;
-        opacity: 0;
-        transition: opacity 250ms ease-out;
-        overflow-y: scroll;
-      }
-
-      @media only screen and (min-width: 768px) { .wrapper-overlay { top: 7rem; min-height: calc( 100vh - 7rem ); } }
-
-      .wrapper-overlay .visible {
-         z-index: 2;
-         opacity: 1;
-      }
-
-      @media only screen and (max-width: 767px) { h2 { line-height: 1.2; }
-        .site-navigation { padding-left: 0; }
-        .site-navigation .dropdown-menu { min-width: 101vw; overflow-x: hidden; min-height: 100vh; right: -1px; top: 5rem; margin: 0; border: 0; }
-        .site-navigation .dropdown-menu .nav { font-size: 1.8rem; }
-        .site-navigation .dropdown-menu .subnav { font-size: 1.5rem; }
-        .wrapper-post-content { padding: 0 1.5rem; }
+      @media only screen and (max-width: 767px) {
+        h2 { line-height: 1.2; }
         .wrapper-overlay .widget { margin-bottom: 4rem; }
         .wrapper-overlay .widget-title { padding-bottom: 0; }
         .wrapper-overlay .widget-ad { text-align: center; margin-bottom: 2rem; padding-bottom: 0; }
-        .is-nothome .wrapper-posts { padding-top: 4rem; }
-        .thumbs { padding: 1.5rem; }
-        .wrapper-related .widget-title { padding: 1rem 1.5rem 0; margin-bottom: 0; }
-        .is-post.is-page .wrapper-posts .post-title { padding-top: 0; }
-        .page-share + .post-quote { padding-top: 0; }
-        .is-post .wrapper-post-meta { padding-top: 1.5rem; }
-        .is-post:not(.is-audio) .post-media-caption.post-text { padding-top: 0; }
-        .is-post .post-subtitle { padding-top: 1rem; } }
-
+      }
     </style>
   </head>
   <body>
@@ -97,7 +76,9 @@
           <div class="col">
             <img class="avatar float-left pr-1" src="{PortraitURL-30}">
             <h4><a href="{BlogURL}">{Title}</a></h4>
-          </div> <!-- col 1 -->
+          </div>
+          <!-- end col 1 -->
+
           <!-- Col 2 -->
           <div class="col text-light text-right">
             <nav>
@@ -105,7 +86,7 @@
                 <span class="fa fa-laptop px-1" aria-hidden="true"></span>
               </a>
               <div class="dropdown">
-                <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-bars px-1" aria-hidden="true"></span></a>
+                <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-bars px-1" aria-hidden="true"></span></a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                   <a class="dropdown-item" href="#">Home</a>
                   <a class="dropdown-item" href="#">About</a>
@@ -113,11 +94,16 @@
                   <a class="dropdown-item" href="#">Contact</a>
                 </div>
               </div>
+              <!-- end dropdown -->
             </nav>
-          </div> <!-- col 2 -->
-        </div> <!-- row -->
-      </div> <!-- container -->
-    </header> <!-- hjw-header -->
+          </div>
+          <!-- end col 2 -->
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+    </header>
+    <!-- end hjw-header -->
 
     <div class="container">
       <section class="hjw-about-me">
@@ -257,6 +243,15 @@
       <div id="social-overlay" class="wrapper-overlay">
         <div class="container">
           <div class="row">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis tempus dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus ullamcorper purus eros, vitae fringilla quam fringilla sit amet. Curabitur tristique tincidunt fermentum. Mauris maximus justo id nisi iaculis sagittis. Nulla ipsum lectus, dignissim lacinia nunc quis, ornare sollicitudin lectus. Donec dolor odio, euismod sit amet lacus nec, aliquet ultrices ex. Maecenas placerat enim a metus faucibus, a pharetra tellus consequat. Etiam non egestas lorem. Vivamus vitae mauris vitae tellus tincidunt congue eget ut nibh. Nunc vulputate nisl vitae justo molestie, sit amet blandit purus consectetur. Duis sit amet lectus sit amet tellus facilisis feugiat. Cras porttitor sapien eu tincidunt mattis.
+            </p>
+            <p>
+              Integer interdum turpis at massa interdum, vel euismod sapien ultricies. In hac habitasse platea dictumst. Aenean id elit a lectus interdum tristique. Mauris pretium elit erat, mattis sagittis tortor volutpat sit amet. Proin sed felis blandit, imperdiet erat a, vulputate tellus. Donec nulla erat, placerat nec enim et, mollis eleifend nisi. Etiam iaculis, velit ut vulputate semper, dolor nulla facilisis justo, ut elementum sapien velit vulputate tellus. Proin fermentum ut eros non consequat. Donec facilisis justo lacus, non viverra ex maximus et. Integer justo nulla, dapibus quis vestibulum sit amet, faucibus vel ante.
+            </p>
+            <p>
+              Phasellus eu congue dolor, vitae viverra nulla. Sed vulputate euismod sem sed finibus. Praesent quis rhoncus erat. Sed auctor ante quis diam tempus posuere. Pellentesque ut nisl porta, aliquam sapien sit amet, laoreet sem. Curabitur placerat suscipit vulputate. Curabitur mollis, ligula nec tincidunt elementum, eros arcu feugiat dolor, id scelerisque nunc tellus id nunc. Mauris euismod nibh in nunc lacinia venenatis. Vivamus vestibulum sagittis commodo. Maecenas eget pharetra odio. Praesent sagittis mi vitae quam aliquet fermentum. Donec condimentum auctor ultricies. Aenean commodo dui et scelerisque volutpat. In maximus, risus aliquet semper vulputate, lorem ex iaculis est, at varius ex ligula at felis. Curabitur eget bibendum odio.
+            </p>
           </div> <!-- row -->
         </div> <!-- container -->
       </div> <!-- wrapper-overlay -->
@@ -268,13 +263,11 @@
     <!-- Optional JavaScript -->
     <script type="text/javascript">
       $("document").ready(function() {
-        var t = $("#top");
-        var e = $(".widgets-overlay-link");
-        $(e).click(function(e) {
-          e.preventDefault();
-          var i = $(this).attr("href");
-          $(i).toggleClass("visible");
-          $(t).toggleClass("has-overlay-visible").delay(500).animate({scrollTop:0},800);
+        var element = $(".widgets-overlay-link");
+        $(element).click(function(element) {
+          element.preventDefault();
+          var srcaddy = $(this).attr("href");
+          $(srcaddy).toggleClass("visible");
         })
       });
     </script>
