@@ -75,24 +75,27 @@
           <!-- Col 1 -->
           <div class="col">
             <img class="avatar float-left pr-1" src="{PortraitURL-30}">
-            <h4><a href="{BlogURL}">{Title}</a></h4>
+            <h4><a class="text-light" href="{BlogURL}">{Title}</a></h4>
           </div>
           <!-- end col 1 -->
 
           <!-- Col 2 -->
-          <div class="col text-light text-right">
-            <nav>
-              <a href="#social-overlay" class="widgets-overlay-link">
-                <span class="fa fa-laptop px-1" aria-hidden="true"></span>
+          <div class="col">
+            <nav class="nav justify-content-end ">
+              <a href="#social-overlay" class="nav-item nav-link widgets-overlay-link">
+                <span class="fa fa-laptop px-1 text-light" aria-hidden="true"></span>
               </a>
               <div class="dropdown">
-                <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-bars px-1" aria-hidden="true"></span></a>
+                <a href="#" class="nav-item nav-link dropdown-toggle text-light" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="fa fa-bars px-1 text-light" aria-hidden="true"></span>
+                </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                   <a class="dropdown-item" href="#">Home</a>
                   <a class="dropdown-item" href="#">About</a>
                   <a class="dropdown-item" href="#">Gear</a>
                   <a class="dropdown-item" href="#">Contact</a>
                 </div>
+                <!-- end dropdown-menu -->
               </div>
               <!-- end dropdown -->
             </nav>
