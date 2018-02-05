@@ -10,6 +10,15 @@
     <!-- Designed for mobile devices and is responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Images for carousel
+    Christian, Family, Drums, Keys, Sports
+    -->
+    <meta name="image:Carousel1" content="http://static.tumblr.com/..."/>
+    <meta name="image:Carousel2" content="http://static.tumblr.com/..."/>
+    <meta name="image:Carousel3" content="http://static.tumblr.com/..."/>
+    <meta name="image:Carousel4" content="http://static.tumblr.com/..."/>
+    <meta name="image:Carousel5" content="http://static.tumblr.com/..."/>
+
     <title>{Title}</title>
 
     <!-- Bootstrap CSS -->
@@ -116,10 +125,38 @@
       <!-- end container -->
     </header>
     <!-- end hjw-header -->
+    <section id="hjw-carousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="hjw-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="hjw-carousel" data-slide-to="1"></li>
+        <li data-target="hjw-carousel" data-slide-to="2"></li>
+        <li data-target="hjw-carousel" data-slide-to="3"></li>
+        <li data-target="hjw-carousel" data-slide-to="4"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block" src="..." alt="First slide">
+        </div>
+        <div class="carousel-item active">
+          <img class="d-block" src="..." alt="Second slide">
+        </div>
+        <div class="carousel-item active">
+          <img class="d-block" src="..." alt="Third slide">
+        </div>
+        <div class="carousel-item active">
+          <img class="d-block" src="..." alt="Fourth slide">
+        </div>
+        <div class="carousel-item active">
+          <img class="d-block" src="..." alt="Fifth slide">
+        </div>
+      </div>
+    </section>
+    <!-- end hjw-crousel -->
+    <section class="hjw-about-me">
+    </section>
+    <!-- end hjw-about-me section -->
 
     <div class="container">
-      <section class="hjw-about-me">
-      </section> <!-- about me section -->
       {block:Posts}
         <section class="hjw-posts">
           <!-- ************************************************************ -->
