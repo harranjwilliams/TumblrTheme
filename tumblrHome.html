@@ -53,6 +53,24 @@
         background: #000000;
       }
 
+      .carouselImage {
+        position: relative;
+        width: 3000px;
+        height: 400px;
+        overflow: hidden;
+      }
+
+      .carouselImage img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        /* height: 100%;
+        width: auto;
+        -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%); */
+      }
+
       .wrapper-overlay .widget { overflow: auto; }
 
       .wrapper-overlay {
@@ -134,20 +152,20 @@
         <li data-target="hjw-carousel" data-slide-to="4"></li>
       </ol>
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block" src="..." alt="First slide">
+        <div class="carouselImage carousel-item active">
+          <img class="d-block" src="{image:Carousel1}" alt="First slide">
         </div>
-        <div class="carousel-item active">
-          <img class="d-block" src="..." alt="Second slide">
+        <div class="carouselImage carousel-item active">
+          <img class="d-block" src="{image:Carousel2}" alt="Second slide">
         </div>
-        <div class="carousel-item active">
-          <img class="d-block" src="..." alt="Third slide">
+        <div class="carouselImage carousel-item active">
+          <img class="d-block" src="{image:Carousel3}" alt="Third slide">
         </div>
-        <div class="carousel-item active">
-          <img class="d-block" src="..." alt="Fourth slide">
+        <div class="carouselImage carousel-item active">
+          <img class="d-block" src="{image:Carousel4}" alt="Fourth slide">
         </div>
-        <div class="carousel-item active">
-          <img class="d-block" src="..." alt="Fifth slide">
+        <div class="carouselImage carousel-item active">
+          <img class="d-block" src="{image:Carousel5}" alt="Fifth slide">
         </div>
       </div>
     </section>
