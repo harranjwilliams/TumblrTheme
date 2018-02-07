@@ -18,6 +18,7 @@
     <meta name="image:Carousel3" content="http://static.tumblr.com/..."/>
     <meta name="image:Carousel4" content="http://static.tumblr.com/..."/>
     <meta name="image:Carousel5" content="http://static.tumblr.com/..."/>
+    <meta name="image:AboutMe" content="http://static.tumblr.com/..."/>
 
     <title>{Title}</title>
 
@@ -92,7 +93,7 @@
       }
 
       .wrapper-overlay.visible {
-        z-index: 2;
+        z-index: 200;
         opacity: 1;
       }
 
@@ -146,10 +147,10 @@
     <section id="hjw-carousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="hjw-carousel" data-slide-to="0" class="active"></li>
-        <li data-target="hjw-carousel" data-slide-to="1"></li>
+        <!-- <li data-target="hjw-carousel" data-slide-to="1"></li>
         <li data-target="hjw-carousel" data-slide-to="2"></li>
         <li data-target="hjw-carousel" data-slide-to="3"></li>
-        <li data-target="hjw-carousel" data-slide-to="4"></li>
+        <li data-target="hjw-carousel" data-slide-to="4"></li> -->
       </ol>
       <div class="carousel-inner">
         <div class="carouselView carousel-item active">
@@ -180,12 +181,14 @@
               In a nutshell, I am a Christian, husband, father, musician, with ADD who can program, cheer for the Oakland Raiders, Chicago Bulls, and Rutgers Scarlet Knights and listen to audio books while playing Homescapes in my down time.
             </div>
             <div>
-              <a class="btn" href="#" role="button">There's More</a>
+              <a class="btn btn-outline-dark" href="#" role="button">There's More</a>
             </div>
           </div>
-          <div>
-            <img>
+          <!-- end about me text -->
+          <div class="text-center">
+            <img src="{image:AboutMe}" alt="About Me">
           </div>
+          <!-- end about me image -->
         </div>
       </div>
     </section>
