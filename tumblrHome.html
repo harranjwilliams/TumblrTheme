@@ -15,9 +15,6 @@
     -->
     <meta name="image:Carousel1" content="http://static.tumblr.com/..."/>
     <meta name="image:Carousel2" content="http://static.tumblr.com/..."/>
-    <meta name="image:Carousel3" content="http://static.tumblr.com/..."/>
-    <meta name="image:Carousel4" content="http://static.tumblr.com/..."/>
-    <meta name="image:Carousel5" content="http://static.tumblr.com/..."/>
     <meta name="image:AboutMe" content="http://static.tumblr.com/..."/>
 
     <title>{Title}</title>
@@ -50,63 +47,17 @@
         width: 100vw;
       }
 
-      header, .wrapper-overlay {
-        background: #000000;
+      header, .hjw-social-media {
+        background: #303030;
       }
 
-      .carouselView {
-        position: relative;
-        width: 2000px;
-        height: 350px;
-        overflow: hidden;
-      }
-
-      .carouselView img {
-        /* position: absolute;
-        left: 50%;
-        top: 50%;
-        height: 100%;
-        width: auto;
-        -webkit-transform: translate(-50%,-50%);
-        -ms-transform: translate(-50%,-50%);
-        transform: translate(-50%,-50%); */
+      .hjw-about-me {
+        background-color: #F0F0F0;
       }
 
       .img-about {
-        max-width: 45%;
+        max-width: 70%;
         height: auto;
-      }
-
-      .wrapper-overlay .widget { overflow: auto; }
-
-      .wrapper-overlay {
-        width: 80vw;
-        height: calc ( 100vh - 5rem );
-        min-height: calc( 100vh - 5rem );
-        position: absolute;
-        top: 5rem;
-        z-index: -10;
-        opacity: 0;
-        transition: opacity 250ms ease-out;
-        overflow-y: scroll;
-      }
-
-      @media only screen and (min-width: 700px) {
-        .wrapper-overlay {
-          min-height: calc( 100vh - 7rem );
-        }
-      }
-
-      .wrapper-overlay.visible {
-        z-index: 200;
-        opacity: 1;
-      }
-
-      @media only screen and (max-width: 701px) {
-        h2 { line-height: 1.2; }
-        .wrapper-overlay .widget { margin-bottom: 4rem; }
-        .wrapper-overlay .widget-title { padding-bottom: 0; }
-        .wrapper-overlay .widget-ad { text-align: center; margin-bottom: 2rem; padding-bottom: 0; }
       }
     </style>
   </head>
@@ -123,23 +74,11 @@
 
           <!-- Col 2 -->
           <div class="col">
-            <nav class="nav justify-content-end ">
-              <a href="#social-overlay" class="nav-item nav-link widgets-overlay-link">
-                <span class="fa fa-laptop px-1 text-light" aria-hidden="true"></span>
-              </a>
-              <div class="dropdown">
-                <a href="#" class="nav-item nav-link dropdown-toggle text-light" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="fa fa-bars px-1 text-light" aria-hidden="true"></span>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item" href="#">Home</a>
-                  <a class="dropdown-item" href="#">About</a>
-                  <a class="dropdown-item" href="#">Gear</a>
-                  <a class="dropdown-item" href="#">Contact</a>
-                </div>
-                <!-- end dropdown-menu -->
-              </div>
-              <!-- end dropdown -->
+            <nav class="navbar navbar-expand-sm justify-content-end ">
+              <a class="nav-link" href="#">About Me</a>
+              <a class="nav-link" href="#">Posts</a>
+              <a class="nav-link" href="#">Gear</a>
+              <a class="nav-link" href="#">Contact</a>
             </nav>
           </div>
           <!-- end col 2 -->
@@ -149,49 +88,51 @@
       <!-- end container -->
     </header>
     <!-- end hjw-header -->
+
     <section id="hjw-carousel" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="hjw-carousel" data-slide-to="0" class="active"></li>
-        <!-- <li data-target="hjw-carousel" data-slide-to="1"></li>
-        <li data-target="hjw-carousel" data-slide-to="2"></li>
-        <li data-target="hjw-carousel" data-slide-to="3"></li>
-        <li data-target="hjw-carousel" data-slide-to="4"></li> -->
-      </ol>
-      <div class="carousel-inner">
+      <div>
         <div class="carouselView carousel-item active">
-          <img class="d-block" src="{image:Carousel1}" alt="First slide">
+          <img class="d-block w-100" src="{image:Carousel1}" alt="First slide">
         </div>
-        <!-- <div class="carouselImage carousel-item active">
-          <img class="d-block" src="{image:Carousel2}" alt="Second slide">
+        <div class="carouselImage carousel-item">
+          <img class="d-block w-100" src="{image:Carousel2}" alt="Second slide">
         </div>
-        <div class="carouselImage carousel-item active">
-          <img class="d-block" src="{image:Carousel3}" alt="Third slide">
-        </div>
-        <div class="carouselImage carousel-item active">
-          <img class="d-block" src="{image:Carousel4}" alt="Fourth slide">
-        </div>
-        <div class="carouselImage carousel-item active">
-          <img class="d-block" src="{image:Carousel5}" alt="Fifth slide">
-        </div> -->
       </div>
     </section>
     <!-- end hjw-crousel -->
 
+    <section class="hjw-social-media">
+      <div class="container">
+        <div class="row justify-content-center">
+          <nav class="navbar navbar-expand-sm col-xs-12">
+            <a class="nav-link" href="#"><span class="fa fa-twitter-square px-1 text-light" aria-hidden="true"></span></a>
+            <a class="nav-link" href="#"><span class="fa fa-instagram px-1 text-light" aria-hidden="true"></span></a>
+            <a class="nav-link" href="#"><span class="fa fa-youtube-square px-1 text-light" aria-hidden="true"></span></a>
+            <a class="nav-link" href="#"><span class="fa fa-facebook-square px-1 text-light" aria-hidden="true"></span></a>
+            <a class="nav-link" href="#"><span class="fa fa-google-plus-square px-1 text-light" aria-hidden="true"></span></a>
+            <a class="nav-link" href="#"><span class="fa fa-pinterest-square px-1 text-light" aria-hidden="true"></span></a>
+          </nav>
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+    </section>
+
     <section class="hjw-about-me">
       <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <h4>About</h4>
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h4>In A Nutshell,</h4>
             <div>
-              In a nutshell, I am a Christian, husband, father, musician, with ADD who can program, cheer for the Oakland Raiders, Chicago Bulls, and Rutgers Scarlet Knights and listen to audio books while playing Homescapes in my down time.
+              I am a Christian, husband, father, musician, with ADD who can program, cheer for the Oakland Raiders, Chicago Bulls, and Rutgers Scarlet Knights and listen to audio books while playing Homescapes in my down time.
             </div>
             <div>
               <a class="btn btn-outline-dark" href="#" role="button">There's More</a>
             </div>
           </div>
           <!-- end about me text -->
-          <div class="col-md-4 text-center">
-            <img src="{image:AboutMe}" class="img-about" alt="About Me">
+          <div class="col-md-6 text-center">
+            <img src="{image:AboutMe}" class="img-about border rounded-circle" alt="About Me">
           </div>
           <!-- end about me image -->
         </div>
@@ -332,21 +273,6 @@
       {/block:Posts}
       <footer>
       </footer>
-      <div id="social-overlay" class="wrapper-overlay">
-        <div class="container">
-          <div class="row">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis tempus dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus ullamcorper purus eros, vitae fringilla quam fringilla sit amet. Curabitur tristique tincidunt fermentum. Mauris maximus justo id nisi iaculis sagittis. Nulla ipsum lectus, dignissim lacinia nunc quis, ornare sollicitudin lectus. Donec dolor odio, euismod sit amet lacus nec, aliquet ultrices ex. Maecenas placerat enim a metus faucibus, a pharetra tellus consequat. Etiam non egestas lorem. Vivamus vitae mauris vitae tellus tincidunt congue eget ut nibh. Nunc vulputate nisl vitae justo molestie, sit amet blandit purus consectetur. Duis sit amet lectus sit amet tellus facilisis feugiat. Cras porttitor sapien eu tincidunt mattis.
-            </p>
-            <p>
-              Integer interdum turpis at massa interdum, vel euismod sapien ultricies. In hac habitasse platea dictumst. Aenean id elit a lectus interdum tristique. Mauris pretium elit erat, mattis sagittis tortor volutpat sit amet. Proin sed felis blandit, imperdiet erat a, vulputate tellus. Donec nulla erat, placerat nec enim et, mollis eleifend nisi. Etiam iaculis, velit ut vulputate semper, dolor nulla facilisis justo, ut elementum sapien velit vulputate tellus. Proin fermentum ut eros non consequat. Donec facilisis justo lacus, non viverra ex maximus et. Integer justo nulla, dapibus quis vestibulum sit amet, faucibus vel ante.
-            </p>
-            <p>
-              Phasellus eu congue dolor, vitae viverra nulla. Sed vulputate euismod sem sed finibus. Praesent quis rhoncus erat. Sed auctor ante quis diam tempus posuere. Pellentesque ut nisl porta, aliquam sapien sit amet, laoreet sem. Curabitur placerat suscipit vulputate. Curabitur mollis, ligula nec tincidunt elementum, eros arcu feugiat dolor, id scelerisque nunc tellus id nunc. Mauris euismod nibh in nunc lacinia venenatis. Vivamus vestibulum sagittis commodo. Maecenas eget pharetra odio. Praesent sagittis mi vitae quam aliquet fermentum. Donec condimentum auctor ultricies. Aenean commodo dui et scelerisque volutpat. In maximus, risus aliquet semper vulputate, lorem ex iaculis est, at varius ex ligula at felis. Curabitur eget bibendum odio.
-            </p>
-          </div> <!-- row -->
-        </div> <!-- container -->
-      </div> <!-- wrapper-overlay -->
     </div> <!-- content container -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
