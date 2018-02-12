@@ -56,9 +56,18 @@
       }
 
       .img-about {
-        max-width: 70%;
+        max-width: 60%;
         height: auto;
       }
+
+      .like-reblog {
+    		border: 1px solid #000;
+    	}
+
+    	.like-reblog li {
+    		padding: 6px;
+    		height: 20px;
+    	}
     </style>
   </head>
   <body>
@@ -75,10 +84,10 @@
           <!-- Col 2 -->
           <div class="col">
             <nav class="navbar navbar-expand-sm justify-content-end ">
-              <a class="nav-link" href="#">About Me</a>
-              <a class="nav-link" href="#">Posts</a>
-              <a class="nav-link" href="#">Gear</a>
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link text-light" href="#">About Me</a>
+              <a class="nav-link text-light" href="#">Posts</a>
+              <a class="nav-link text-light" href="#">Gear</a>
+              <a class="nav-link text-light" href="#">Contact</a>
             </nav>
           </div>
           <!-- end col 2 -->
@@ -153,8 +162,8 @@
           <!-- ************************************************************ -->
           {block:Photo}
             <article>
-              {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
-              {block:HighRes}<a href="{PhotoURL-HighRes}">View in High-Res</a>{/block:HighRes}
+              {LinkOpenTag}<img src="{PhotoURL-250}" alt="{PhotoAlt}" />{LinkCloseTag}
+              {block:HighRes}<br><a href="{PhotoURL-HighRes}">(View in High-Res)</a>{/block:HighRes}
               <!-- Exchangeable image file format. Not used in JPEG, PNG, GIF or 2000 -->
               {block:Exif}
                 <ul>
@@ -165,6 +174,10 @@
                 </ul>
               {/block:Exif}
         			{block:Caption}{Caption}{/block:Caption}
+              <ul class="like-reblog">
+                <li>{ReblogButton}</li>
+                <li>{LikeButton}</li>
+              </ul>
             </article>
           {/block:Photo}
           <!-- ************************************************************ -->
