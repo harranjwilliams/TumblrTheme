@@ -60,6 +60,13 @@
         height: auto;
       }
 
+      .hjw-post {
+        background: #F0F0F0;
+    		margin: 40px auto;
+    		padding: 20px;
+    		border-radius: 6px;
+      }
+
       .like-reblog {
     		border: 1px solid #000;
     	}
@@ -154,14 +161,14 @@
         <section class="hjw-posts">
           <!-- ************************************************************ -->
           {block:Text}
-            <article>
+            <article class="hjw-post">
               {block:Title}{Title}{/block:Title}
               {Body}
             </article>
           {/block:Text}
           <!-- ************************************************************ -->
           {block:Photo}
-            <article>
+            <article class="hjw-post">
               {LinkOpenTag}<img src="{PhotoURL-250}" alt="{PhotoAlt}" />{LinkCloseTag}
               {block:HighRes}<br><a href="{PhotoURL-HighRes}">(View in High-Res)</a>{/block:HighRes}
               <!-- Exchangeable image file format. Not used in JPEG, PNG, GIF or 2000 -->
@@ -224,7 +231,7 @@
           {/block:Quote}
           <!-- ************************************************************ -->
           {block:Link}
-            <article>
+            <article  class="hjw-post">
               <a href="{URL}" {Target}>{Name}</a>
               {block:Thumbnail}
                 {Thumbnail}
