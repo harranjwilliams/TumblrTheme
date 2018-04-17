@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <h
     <!-- Font Awesome code to use icons via CDN -->
     <script src="https://use.fontawesome.com/0afca33ble.js"></script>
     <!-- Character encoding for this HTML document -->
     <meta charset="utf-8">
     <!-- Compatible with Microsoft Edge Browser -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="XUA-Compatible" content="IE=edge">
     <!-- Designed for mobile devices and is responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -43,11 +43,31 @@
     <!-- DEVELOPMENT REACT SCRIPTS -->
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.min.js"></script>
     <!-- PRODUCTION REACT SCRIPS
     <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.min.js"></script> -->
+
+    <script type="text/javascript">
+      (function(){
+        var ensureString = function(str) {
+          return !str ? '' : str;
+        };
+
+        var basicVariables = {
+          postQuote: ensureString({JSQuote}),
+          postQuoteSource: ensureString({JSSource})
+        };
+
+        root.tumblrData = {
+          basicVariables : basicVariables
+        };
+      })(this);
+
+    </script>
 
     <style>
       body {
@@ -85,10 +105,6 @@
     		height: 20px;
     	}
     </style>
-
-    <script type="text/babel">
-      ReactDOM.render(<h1>Hello, world</h1>, document.getElementById('react'));
-    </script>
 
   </head>
   <body>
@@ -172,159 +188,17 @@
 
     <div class="container">
       {block:Posts}
-        <section class="hjw-posts">
-          <!-- ************************************************************ -->
-          <!--
-          {block:Text}
-            <article class="hjw-post">
-              {block:Title}{Title}{/block:Title}
-              {Body}
-            </article>
-          {/block:Text}
-          -->
-          <!-- ************************************************************ -->
-          <!--
-          {block:Photo}
-            <article class="hjw-post">
-              {LinkOpenTag}<img src="{PhotoURL-250}" alt="{PhotoAlt}" />{LinkCloseTag}
-              {block:HighRes}<br><a href="{PhotoURL-HighRes}">(View in High-Res)</a>{/block:HighRes}
-              -->
-              <!-- Exchangeable image file format. Not used in JPEG, PNG, GIF or 2000 -->
-              <!--
-              {block:Exif}
-                <ul>
-                  {block:Camera}<li>Camera: {Camera}</li>{/block:Camera}
-                  {block:Aperture}<li>Aperture: {Aperture}</li>{/block:Aperture}
-                  {block:Exposure}<li>Exposure: {Exposure}</li>{/block:Exposure}
-                  {block:FocalLength}<li>Focal Length: {FocalLength}</li>{/block:FocalLength}
-                </ul>
-              {/block:Exif}
-        			{block:Caption}{Caption}{/block:Caption}
-              <ul class="like-reblog">
-                <li>{ReblogButton}</li>
-                <li>{LikeButton}</li>
-              </ul>
-            </article>
-          {/block:Photo}
-          -->
-          <!-- ************************************************************ -->
-          <!--
-          {block:Panorama}
-            <article>
-              {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />{LinkCloseTag}
-              {block:HighRes}<a href="{PhotoURL-HighRes}">View in High-Res</a>{/block:HighRes}
-              -->
-              <!-- Exchangeable image file format. Not used in JPEG, PNG, GIF or 2000 -->
-              <!--
-              {block:Exif}
-                <ul>
-                  {block:Camera}<li>Camera: {Camera}</li>{/block:Camera}
-                  {block:Aperture}<li>Aperture: {Aperture}</li>{/block:Aperture}
-                  {block:Exposure}<li>Exposure: {Exposure}</li>{/block:Exposure}
-                  {block:FocalLength}<li>Focal Length: {FocalLength}</li>{/block:FocalLength}
-                </ul>
-              {/block:Exif}
-        			{block:Caption}{Caption}{/block:Caption}
-            </article>
-          {/block:Panorama}
-          -->
-          <!-- ************************************************************ -->
-          <!--
-          {block:Photoset}
-            <article>
-              {block:Photos}
-              <img src="{PhotoURL-500}" width="{PhotoWidth-500}"height="{PhotoHeight-500}" />
-              {block:Caption}{Caption}{/block:Caption}
-              {block:Exif}
-                <ul>
-                  {block:Camera}<li>Camera: {Camera}</li>{/block:Camera}
-                  {block:Aperture}<li>Aperture: {Aperture}</li>{/block:Aperture}
-                  {block:Exposure}<li>Exposure: {Exposure}</li>{/block:Exposure}
-                  {block:FocalLength}<li>Focal Length: {FocalLength}</li>{/block:FocalLength}
-                </ul>
-              {/block:Exif}
-              {/block:Photos}
-              {block:Caption}{Caption}{/block:Caption}
-            </article>
-          {/block:Photoset}
-          -->
-          <!-- ************************************************************ -->
-          {block:Quote}
-            <article>
-              {Quote}
-              {block:Source}<br>&mdash;{Source}{/block:Source}
-            </article>
-          {/block:Quote}
-          <!-- ************************************************************ -->
-          <!--
-          {block:Link}
-            <article  class="hjw-post">
-              <a href="{URL}" {Target}>{Name}</a>
-              {block:Thumbnail}
-                {Thumbnail}
-              {/block:Thumbnail}
-        			{block:Description}{Description}{/block:Description}
-            </article>
-          {/block:Link}
-          -->
-          <!-- ************************************************************ -->
-          <!--
-          {block:Chat}
-            <article>
-              {block:Title}{Title}{/block:Title}
-              <table>
-                {block:Lines}
-                <tr>
-                  <th>{block:Label}{Label}{/block:Label}</th>
-                  <td>{Line}</td>
-                </tr>
-                {/block:Lines}
-              </table>
-            </article>
-          {/block:Chat}
-          -->
-          <!-- ************************************************************ -->
-          <!--
-          {block:Audio}
-            <article>
-              {AudioPlayer}
-              {block:Caption}{Caption}{/block:Caption}
-            </article>
-          {/block:Audio}
-          -->
-          <!-- ************************************************************ -->
-          <!--
-          {block:Video}
-            <article>
-              {Video-500}
-        			{block:Caption}{Caption}{/block:Caption}
-            </article>
-          {/block:Video}
-          -->
-          <!-- ************************************************************ -->
-          <!--
-          {block:Answer}
-            <article>
-              <div class="question">
-                <div class="asker">{Asker}</div>
-                <div class="asker-question">{Question}</div>
-                <img class="asker-avatar" src="{AskerPortraitURL-96}" alt="">
-              </div>
-
-              {block:Answerer}
-                <div class="answer">
-                  <div class="answerer">{Answerer}</div>
-                  <div class="answerer-answer">{Answer}</div>
-                  <img class="answerer-avatar" src="{AnswererPortraitURL-96}" alt="">
-              {/block:Answerer}
-
-              <div class="replies">
-                {Replies}
-              </div>
-            </article>
-          {/block:Answer}
-          -->
-          <!-- ************************************************************ -->
+        <section id="hjw-posts">
+          <div id="hjw-text-post"></div>
+          <div id="hjw-photo-post"></div>
+          <div id="hjw-panorama-post"></div>
+          <div id="hjw-photoset-post"></div>
+          <div id="hjw-quote-post"></div>
+          <div id="hjw-link-post"></div>
+          <div id="hjw-chat-post"></div>
+          <div id="hjw-audio-post"></div>
+          <div id="hjw-video-post"></div>
+          <div id="hjw-answer-post"></div>
         </section> <!-- posts section -->
       {/block:Posts}
       <footer>
@@ -335,6 +209,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <!-- Optional JavaScript -->
+    <script type="text/babel" src="https://static.tumblr.com/dug3zos/lJlp6maz5/harranjwilliams.js"></script>
     <script type="text/javascript">
       $("document").ready(function() {
         var element = $(".widgets-overlay-link");
