@@ -1,16 +1,16 @@
 class TextPost extends React.Component {
   render() {
     return (
-      <div><h1>Text Post</h1></div>
+      <h1>Text Post</h1>
     );
   }
 }
 
 class QuotePost extends React.Component {
   componentDidMount() {
-    // Code
+    alert(window.tumblrData.basicVariables.quote);
   }
-  
+
   render() {
     return (
       <div><h1>Quote Post</h1></div>
