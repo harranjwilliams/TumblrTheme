@@ -1,42 +1,42 @@
 /* Palette color codes */
 /* Palette URL: http://paletton.com/#uid=33o0u0koSlMfYulkYpwtahvAWc7 */
 
-/* As hex codes */
+:root {
+  /* As hex codes */
+  --main-color-primary-0: #1B5A6C; /* Main Primary color */
+  --main-color-primary-1: #4E8696;
+  --main-color-primary-2: #2E6D7E;
+  --main-color-primary-3: #0A4657;
+  --main-color-primary-4: #022F3C;
 
-.color-primary-0 { color: #1B5A6C }	/* Main Primary color */
-.color-primary-1 { color: #4E8696 }
-.color-primary-2 { color: #2E6D7E }
-.color-primary-3 { color: #0A4657 }
-.color-primary-4 { color: #022F3C }
+  --main-color-secondary-1-0: #AD8527;	/* Main Secondary color (1) */
+  --main-color-secondary-1-1: #F2CE79;
+  --main-color-secondary-1-2: #CBA346;
+  --main-color-secondary-1-3: #8B650C;
+  --main-color-secondary-1-4: #614400;
 
-.color-secondary-1-0 { color: #AD8527 }	/* Main Secondary color (1) */
-.color-secondary-1-1 { color: #F2CE79 }
-.color-secondary-1-2 { color: #CBA346 }
-.color-secondary-1-3 { color: #8B650C }
-.color-secondary-1-4 { color: #614400 }
+  --main-color-secondary-2-0: #AD3927;	/* Main Secondary color (2) */
+  --main-color-secondary-2-1: #F28A79;
+  --main-color-secondary-2-2: #CB5846;
+  --main-color-secondary-2-3: #8B1E0C;
+  --main-color-secondary-2-4: #610D00;
 
-.color-secondary-2-0 { color: #AD3927 }	/* Main Secondary color (2) */
-.color-secondary-2-1 { color: #F28A79 }
-.color-secondary-2-2 { color: #CB5846 }
-.color-secondary-2-3 { color: #8B1E0C }
-.color-secondary-2-4 { color: #610D00 }
+  /* As RGBa codes */
+  --main-rgba-primary-0: rgba( 27, 90,108,1);	/* Main Primary color */
+  --main-rgba-primary-1: rgba( 78,134,150,1);
+  --main-rgba-primary-2: rgba( 46,109,126,1);
+  --main-rgba-primary-3: rgba( 10, 70, 87,1);
+  --main-rgba-primary-4: rgba(  2, 47, 60,1);
 
-/* As RGBa codes */
+  --main-rgba-secondary-1-0: rgba(173,133, 39,1);	/* Main Secondary color (1) */
+  --main-rgba-secondary-1-1: rgba(242,206,121,1);
+  --main-rgba-secondary-1-2: rgba(203,163, 70,1);
+  --main-rgba-secondary-1-3: rgba(139,101, 12,1);
+  --main-rgba-secondary-1-4: rgba( 97, 68,  0,1);
 
-.rgba-primary-0 { color: rgba( 27, 90,108,1) }	/* Main Primary color */
-.rgba-primary-1 { color: rgba( 78,134,150,1) }
-.rgba-primary-2 { color: rgba( 46,109,126,1) }
-.rgba-primary-3 { color: rgba( 10, 70, 87,1) }
-.rgba-primary-4 { color: rgba(  2, 47, 60,1) }
-
-.rgba-secondary-1-0 { color: rgba(173,133, 39,1) }	/* Main Secondary color (1) */
-.rgba-secondary-1-1 { color: rgba(242,206,121,1) }
-.rgba-secondary-1-2 { color: rgba(203,163, 70,1) }
-.rgba-secondary-1-3 { color: rgba(139,101, 12,1) }
-.rgba-secondary-1-4 { color: rgba( 97, 68,  0,1) }
-
-.rgba-secondary-2-0 { color: rgba(173, 57, 39,1) }	/* Main Secondary color (2) */
-.rgba-secondary-2-1 { color: rgba(242,138,121,1) }
-.rgba-secondary-2-2 { color: rgba(203, 88, 70,1) }
-.rgba-secondary-2-3 { color: rgba(139, 30, 12,1) }
-.rgba-secondary-2-4 { color: rgba( 97, 13,  0,1) }
+  --main-rgba-secondary-2-0: rgba(173, 57, 39,1);	/* Main Secondary color (2) */
+  --main-rgba-secondary-2-1: rgba(242,138,121,1);
+  --main-rgba-secondary-2-2: rgba(203, 88, 70,1);
+  --main-rgba-secondary-2-3: rgba(139, 30, 12,1);
+  --main-rgba-secondary-2-4: rgba( 97, 13,  0,1);
+}
