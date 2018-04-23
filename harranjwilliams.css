@@ -1,60 +1,58 @@
 /* Palette color codes */
 /* Palette URL: http://paletton.com/#uid=33o0u0koSlMfYulkYpwtahvAWc7 */
 
-:root {
+/* :root { */
+  /* Not supported by IE */
   /* As hex codes */
-  --main-color-primary-0: #1B5A6C; /* Main Primary color - bluish */
-  --main-color-primary-1: #4E8696;
+  /*--main-color-primary-0: #1B5A6C; */ /* Main Primary color - bluish */
+  /*--main-color-primary-1: #4E8696;
   --main-color-primary-2: #2E6D7E;
   --main-color-primary-3: #0A4657;
-  --main-color-primary-4: #022F3C;
+  --main-color-primary-4: #022F3C; */
 
-  --main-color-secondary-1-0: #AD8527;	/* Main Secondary color - yellowish (1) */
-  --main-color-secondary-1-1: #F2CE79;
+  /* --main-color-secondary-1-0: #AD8527; */	/* Main Secondary color - yellowish (1) */
+  /* --main-color-secondary-1-1: #F2CE79;
   --main-color-secondary-1-2: #CBA346;
   --main-color-secondary-1-3: #8B650C;
-  --main-color-secondary-1-4: #614400;
+  --main-color-secondary-1-4: #614400; */
 
-  --main-color-secondary-2-0: #AD3927;	/* Main Secondary color (2) - reddish */
-  --main-color-secondary-2-1: #F28A79;
+  /* --main-color-secondary-2-0: #AD3927;*/	/* Main Secondary color (2) - reddish */
+  /*--main-color-secondary-2-1: #F28A79;
   --main-color-secondary-2-2: #CB5846;
   --main-color-secondary-2-3: #8B1E0C;
-  --main-color-secondary-2-4: #610D00;
+  --main-color-secondary-2-4: #610D00; */
 
   /* As RGBa codes */
-  --main-rgba-primary-0: rgba( 27, 90,108,1);	/* Main Primary color - bluish */
-  --main-rgba-primary-1: rgba( 78,134,150,1);
+  /* --main-rgba-primary-0: rgba( 27, 90,108,1); */	/* Main Primary color - bluish */
+  /* --main-rgba-primary-1: rgba( 78,134,150,1);
   --main-rgba-primary-2: rgba( 46,109,126,1);
   --main-rgba-primary-3: rgba( 10, 70, 87,1);
-  --main-rgba-primary-4: rgba(  2, 47, 60,1);
+  --main-rgba-primary-4: rgba(  2, 47, 60,1); */
 
-  --main-rgba-secondary-1-0: rgba(173,133, 39,1);	/* Main Secondary color - yellowish (1) */
-  --main-rgba-secondary-1-1: rgba(242,206,121,1);
+  /* --main-rgba-secondary-1-0: rgba(173,133, 39,1); */	/* Main Secondary color - yellowish (1) */
+  /* --main-rgba-secondary-1-1: rgba(242,206,121,1);
   --main-rgba-secondary-1-2: rgba(203,163, 70,1);
   --main-rgba-secondary-1-3: rgba(139,101, 12,1);
-  --main-rgba-secondary-1-4: rgba( 97, 68,  0,1);
+  --main-rgba-secondary-1-4: rgba( 97, 68,  0,1); */
 
-  --main-rgba-secondary-2-0: rgba(173, 57, 39,1);	/* Main Secondary color - reddish (2) */
-  --main-rgba-secondary-2-1: rgba(242,138,121,1);
+  /* --main-rgba-secondary-2-0: rgba(173, 57, 39,1); */	/* Main Secondary color - reddish (2) */
+  /* --main-rgba-secondary-2-1: rgba(242,138,121,1);
   --main-rgba-secondary-2-2: rgba(203, 88, 70,1);
   --main-rgba-secondary-2-3: rgba(139, 30, 12,1);
-  --main-rgba-secondary-2-4: rgba( 97, 13,  0,1);
-}
+  --main-rgba-secondary-2-4: rgba( 97, 13,  0,1); */
+  /* Not supported by IE */
+/* } */
 
 body {
   font-family: 'Balthazar', serif;
   overflow-x: hidden;
   width: 100vw;
   color: #ffffff;
-  background-color: var(--main-color-primary-4);
-}
-
-h4 {
-  color: var(--main-color-secondary-1-0);
+  background-color: #022F3C; /* --main-color-primary-4 */
 }
 
 .hjw-about-me {
-  background-color: var(--main-color-primary-2);
+  background-color: #2E6D7E; /* --main-color-primary-2 */
 }
 
 .img-about {
@@ -63,6 +61,7 @@ h4 {
 }
 
 #hjw-post-quote {
+  display: table-cell;
   width: 100vw;
   height: 150px;
   text-align: center;
@@ -71,5 +70,5 @@ h4 {
   border-style: solid;
   border-color: white;
   font-size: 20px;
-  background-color: var(--main-color-secondary-1-3);
+  background-color: #8B650C; /* --main-color-secondary-1-3 */
 }
