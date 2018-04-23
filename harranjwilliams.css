@@ -1,5 +1,6 @@
 /* Palette color codes */
 /* Palette URL: http://paletton.com/#uid=33o0u0koSlMfYulkYpwtahvAWc7 */
+/* Good css resource for centering http://howtocenterincss.com/ */
 
 /* :root { */
   /* Not supported by IE */
@@ -51,10 +52,6 @@ body {
   background-color: #022F3C; /* --main-color-primary-4 */
 }
 
-.hjw-about-me {
-  background-color: #2E6D7E; /* --main-color-primary-2 */
-}
-
 .img-about {
   max-width: 60%;
   height: auto;
@@ -66,9 +63,10 @@ body {
   height: 150px;
   text-align: center;
   vertical-align: middle;
-  border: 2px;
+  border: 1px;
   border-style: solid;
-  border-color: white;
-  font-size: 20px;
-  background-color: #8B650C; /* --main-color-secondary-1-3 */
+  border-color: #F2CE79;
+  font-size: 22px;
+  color: #F2CE79;
+  background-color: #3C3C3C;
 }
