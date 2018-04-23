@@ -52,6 +52,23 @@ body {
   background-color: #022F3C; /* --main-color-primary-4 */
 }
 
+a {
+  color: #2E6D7E; /* --main-color-primary-2 */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4E8696; /* --main-color-primary-1 */
+}
+
+a:visited {
+  color: #2E6D7E; /* --main-color-primary-2 */
+}
+
+a:active {
+  color: #2E6D7E; /* --main-color-primary-2 */
+}
+
 article {
   margin: 20px;
 }
