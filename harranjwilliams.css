@@ -52,9 +52,14 @@ body {
   background-color: #022F3C; /* --main-color-primary-4 */
 }
 
+article {
+  margin: 20px;
+}
+
 .img-about {
   max-width: 60%;
   height: auto;
+  margin: 10px;
 }
 
 #hjw-post-quote {
