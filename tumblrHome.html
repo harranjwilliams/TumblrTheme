@@ -125,9 +125,12 @@
         <section class="hjw-posts">
           <!-- ************************************************************ -->
           {block:Text}
-            <article id="hjw-post-text">
-              {block:Title}<h4>{Title}</h4>{/block:Title}
-              {Body}
+            <article class="card bg-transparent" id="hjw-post-text">
+              <div class="card-body">
+                {block:Title}<h4 class="card-title">{Title}</h4>{/block:Title}
+                <div class="card-text">{Body}</div>
+                <!-- Add a card-footer and maybe a card-button -->
+              </div>
             </article>
           {/block:Text}
           <!-- ************************************************************ -->
