@@ -124,14 +124,12 @@
       {block:Posts}
         <section class="hjw-posts">
           <!-- ************************************************************ -->
-          <!--
           {block:Text}
-            <article class="hjw-post">
-              {block:Title}{Title}{/block:Title}
+            <article id="hjw-post-text">
+              {block:Title}<h4>{Title}</h4>{/block:Title}
               {Body}
             </article>
           {/block:Text}
-          -->
           <!-- ************************************************************ -->
           <!--
           {block:Photo}
@@ -201,7 +199,7 @@
           <!-- ************************************************************ -->
           {block:Quote}
             <article id="hjw-post-quote">
-              {Quote}
+              <em>"{Quote}"</em>
               {block:Source}<br>&mdash;{Source}{/block:Source}
             </article>
           {/block:Quote}
