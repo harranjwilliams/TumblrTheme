@@ -48,7 +48,7 @@ body {
   font-family: 'Balthazar', serif;
   overflow-x: hidden;
   width: 100vw;
-  color: #ffffff;
+  color: #D3D3D3;
   background-color: #022F3C; /* --main-color-primary-4 */
 }
 
@@ -70,14 +70,22 @@ a:active {
 }
 
 article {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+h4 {
+  color: #FFFFFF;
 }
 
 .img-about {
   max-width: 60%;
   height: auto;
   margin: 10px;
+}
+
+#hjw-post-text {
+  background-color: #0A4657;
 }
 
 #hjw-post-quote {
