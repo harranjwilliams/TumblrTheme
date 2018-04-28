@@ -77,6 +77,13 @@ article {
 h1, h2, h3, h4, h5, h6 {
   color: #FFFFFF;
 }
+/* https://stackoverflow.com/questions/41051094/making-a-plus-sign-with-css?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa */
+.circle {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #000000;
+}
 
 .img-about {
   max-width: 60%;
@@ -94,9 +101,8 @@ h1, h2, h3, h4, h5, h6 {
   height: 200px;
   text-align: center;
   vertical-align: middle;
-  border: 1px;
-  border-style: solid;
-  border-color: #F2CE79;
+  border-top: 1px solid #F28A79;
+  border-bottom: 1px solid #F28A79;
   font-size: 22px;
   color: #F2CE79;
 }
