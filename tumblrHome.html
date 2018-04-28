@@ -40,42 +40,10 @@
     </script>
     <!-- END Global site tag (gtag.js) - Google Analytics -->
 
-    <style>
-      body {
-        font-family: 'Balthazar', serif;
-        overflow-x: hidden;
-        width: 100vw;
-      }
-
-      header, .hjw-social-media {
-        background: #303030;
-      }
-
-      .hjw-about-me {
-        background-color: #F0F0F0;
-      }
-
-      .img-about {
-        max-width: 60%;
-        height: auto;
-      }
-
-      .hjw-post {
-        background: #F0F0F0;
-    		margin: 40px auto;
-    		padding: 20px;
-    		border-radius: 6px;
-      }
-
-      .like-reblog {
-    		border: 1px solid #000;
-    	}
-
-    	.like-reblog li {
-    		padding: 6px;
-    		height: 20px;
-    	}
+    <style type="text/css">
+    /* Empty space for testing */
     </style>
+
   </head>
   <body>
     <header class="hjw-header">
@@ -138,12 +106,8 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6">
-            <h4>In A Nutshell,</h4>
             <div>
-              I am a Christian, husband, father, musician, with ADD who can program, cheer for the Oakland Raiders, Chicago Bulls, and Rutgers Scarlet Knights and listen to audio books while playing Homescapes in my down time.
-            </div>
-            <div>
-              <a class="btn btn-outline-dark" href="#" role="button">There's More</a>
+              A Christian, husband, father, musician, with ADD who can program, route for the Oakland Raiders, Chicago Bulls, and Rutgers Scarlet Knights and listen to audio books while playing Homescapes in my down time.
             </div>
           </div>
           <!-- end about me text -->
@@ -156,22 +120,30 @@
     </section>
     <!-- end hjw-about-me section -->
 
-    <div class="container">
+    <div>
       {block:Posts}
         <section class="hjw-posts">
           <!-- ************************************************************ -->
           {block:Text}
-            <article class="hjw-post">
-              {block:Title}{Title}{/block:Title}
-              {Body}
+            <article class="container card" id="hjw-post-text">
+              <div class="card-body">
+                {block:Title}<h4 class="card-title">{Title}</h4>{/block:Title}
+                <h6>{block:Date}{ShortMonth} {DayOfMonth}, {Year}{/block:Date}</h6>
+                <div class="card-text">{Body}</div>
+                <!-- Add a card-footer and maybe a card-button -->
+                <!-- <div class="circle"></div> -->
+              </div>
             </article>
           {/block:Text}
           <!-- ************************************************************ -->
+          <!--
           {block:Photo}
             <article class="hjw-post">
               {LinkOpenTag}<img src="{PhotoURL-250}" alt="{PhotoAlt}" />{LinkCloseTag}
               {block:HighRes}<br><a href="{PhotoURL-HighRes}">(View in High-Res)</a>{/block:HighRes}
+              -->
               <!-- Exchangeable image file format. Not used in JPEG, PNG, GIF or 2000 -->
+              <!--
               {block:Exif}
                 <ul>
                   {block:Camera}<li>Camera: {Camera}</li>{/block:Camera}
@@ -187,12 +159,16 @@
               </ul>
             </article>
           {/block:Photo}
+          -->
           <!-- ************************************************************ -->
+          <!--
           {block:Panorama}
             <article>
               {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />{LinkCloseTag}
               {block:HighRes}<a href="{PhotoURL-HighRes}">View in High-Res</a>{/block:HighRes}
+              -->
               <!-- Exchangeable image file format. Not used in JPEG, PNG, GIF or 2000 -->
+              <!--
               {block:Exif}
                 <ul>
                   {block:Camera}<li>Camera: {Camera}</li>{/block:Camera}
@@ -204,7 +180,9 @@
         			{block:Caption}{Caption}{/block:Caption}
             </article>
           {/block:Panorama}
+          -->
           <!-- ************************************************************ -->
+          <!--
           {block:Photoset}
             <article>
               {block:Photos}
@@ -222,14 +200,16 @@
               {block:Caption}{Caption}{/block:Caption}
             </article>
           {/block:Photoset}
+          -->
           <!-- ************************************************************ -->
           {block:Quote}
-            <article>
-              {Quote}
+            <article id="hjw-post-quote">
+              <em>"{Quote}"</em>
               {block:Source}<br>&mdash;{Source}{/block:Source}
             </article>
           {/block:Quote}
           <!-- ************************************************************ -->
+          <!--
           {block:Link}
             <article  class="hjw-post">
               <a href="{URL}" {Target}>{Name}</a>
@@ -239,7 +219,9 @@
         			{block:Description}{Description}{/block:Description}
             </article>
           {/block:Link}
+          -->
           <!-- ************************************************************ -->
+          <!--
           {block:Chat}
             <article>
               {block:Title}{Title}{/block:Title}
@@ -253,21 +235,27 @@
               </table>
             </article>
           {/block:Chat}
+          -->
           <!-- ************************************************************ -->
+          <!--
           {block:Audio}
             <article>
               {AudioPlayer}
               {block:Caption}{Caption}{/block:Caption}
             </article>
           {/block:Audio}
+          -->
           <!-- ************************************************************ -->
+          <!--
           {block:Video}
             <article>
               {Video-500}
         			{block:Caption}{Caption}{/block:Caption}
             </article>
           {/block:Video}
+          -->
           <!-- ************************************************************ -->
+          <!--
           {block:Answer}
             <article>
               <div class="question">
@@ -288,6 +276,7 @@
               </div>
             </article>
           {/block:Answer}
+          -->
           <!-- ************************************************************ -->
         </section> <!-- posts section -->
       {/block:Posts}
@@ -299,15 +288,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <!-- Optional JavaScript -->
-    <script type="text/javascript">
-      $("document").ready(function() {
-        var element = $(".widgets-overlay-link");
-        $(element).click(function(element) {
-          element.preventDefault();
-          var srcaddy = $(this).attr("href");
-          $(srcaddy).toggleClass("visible");
-        })
-      });
-    </script>
   </body>
 </html>
