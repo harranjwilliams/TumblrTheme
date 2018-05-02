@@ -136,34 +136,23 @@
                     <a href={Permalink}><div class="circle"></div></a>
                   {/block:More}
                 {/block:HomePage}
-              </div>
+              </div> <!-- end of bootstrap card -->
             </article>
           {/block:Text}
           <!-- ************************************************************ -->
-          <!--
           {block:Photo}
-            <article class="hjw-post">
-              {LinkOpenTag}<img src="{PhotoURL-250}" alt="{PhotoAlt}" />{LinkCloseTag}
-              {block:HighRes}<br><a href="{PhotoURL-HighRes}">(View in High-Res)</a>{/block:HighRes}
-              -->
-              <!-- Exchangeable image file format. Not used in JPEG, PNG, GIF or 2000 -->
-              <!--
-              {block:Exif}
-                <ul>
-                  {block:Camera}<li>Camera: {Camera}</li>{/block:Camera}
-                  {block:Aperture}<li>Aperture: {Aperture}</li>{/block:Aperture}
-                  {block:Exposure}<li>Exposure: {Exposure}</li>{/block:Exposure}
-                  {block:FocalLength}<li>Focal Length: {FocalLength}</li>{/block:FocalLength}
-                </ul>
-              {/block:Exif}
-        			{block:Caption}{Caption}{/block:Caption}
-              <ul class="like-reblog">
-                <li>{ReblogButton}</li>
-                <li>{LikeButton}</li>
-              </ul>
+            <article class="container bg-transparent" id="hjw-post-photo">
+              <div class="row">
+                <div class="py-3 pr-2 col-md-6 col-lg-4">
+                  {LinkOpenTag}<img src="{PhotoURL-250}" alt="{PhotoAlt}" />{LinkCloseTag}
+                  {block:HighRes}<br><a href="{PhotoURL-HighRes}">(View in High-Res)</a>{/block:HighRes}
+                </div> <!-- end of photo and high res link -->
+                <div class="col-md-6 col-lg-8">
+                  {block:Caption}<p>{Caption}</p>{/block:Caption}
+  		          </div> <!-- end of caption -->
+              </div> <!-- end of row -->
             </article>
           {/block:Photo}
-          -->
           <!-- ************************************************************ -->
           <!--
           {block:Panorama}
