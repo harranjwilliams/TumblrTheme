@@ -142,15 +142,18 @@
           <!-- ************************************************************ -->
           {block:Photo}
             <article class="container bg-transparent" id="hjw-post-photo">
+              <div class="row justify-content-center">
+                <div class="py-3 pr-2">
+                  {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
+                </div>
+              </div>
               <div class="row">
-                <div class="py-3 pr-2 col-md-6 col-lg-4">
-                  {LinkOpenTag}<img src="{PhotoURL-250}" alt="{PhotoAlt}" />{LinkCloseTag}
-                  {block:HighRes}<br><a href="{PhotoURL-HighRes}">(View in High-Res)</a>{/block:HighRes}
-                </div> <!-- end of photo and high res link -->
-                <div class="col-md-6 col-lg-8">
-                  {block:Caption}<p>{Caption}</p>{/block:Caption}
-  		          </div> <!-- end of caption -->
-              </div> <!-- end of row -->
+                <div>
+                  {block:Caption}
+                    <p>{Caption}</p>
+                  {/block:Caption}
+                </div>
+              </div>
             </article>
           {/block:Photo}
           <!-- ************************************************************ -->
