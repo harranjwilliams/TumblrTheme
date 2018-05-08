@@ -120,26 +120,66 @@
     </section>
     <!-- end hjw-about-me section -->
 
-    <div>
-      {block:Posts}
-        <section class="hjw-posts">
+    <div class="container">
+      <section class="hjw-posts">
+        <div class="row">
+          <div class="col-sm-12 col-md-4"> <!-- left column photo, audio, and video posts -->
+            {block:Posts}
+              {block:Photo}
+                <article class="container" id="hjw-post-photo">
+                  <div class="row justify-content-center">
+                    <div class="py-3">
+                      {LinkOpenTag}<img src="{PhotoURL-250}" alt="{PhotoAlt}" />{LinkCloseTag}
+                    </div>
+                  </div>
+                </article>
+              {/block:Photo}
+            {/block:Posts}
+          </div> <!-- end left column -->
+
+          <div class="col-sm-12 col-md-8"> <!-- right column text posts -->
+            {block:Posts}
+              {block:Text}
+                <article class="container card" id="hjw-post-text">
+                  <div class="card-body">
+                    {block:Title}<h4 class="card-title">{Title}</h4>{/block:Title}
+                    <h6>{block:Date}{ShortMonth} {DayOfMonth}, {Year}{/block:Date}</h6>
+                    <div class="card-text">{Body}</div>
+                    {block:HomePage}
+                      {block:More}
+                        <a href={Permalink}>Continue Reading</a>
+                      {/block:More}
+                    {/block:HomePage}
+                  </div> <!-- end card-body -->
+                </article>
+              {/block:Text}
+            {/block:Posts}
+          </div> <!-- end right column -->
+        </div> <!-- end of row -->
+      </section> <!-- posts section -->
+    </div>
           <!-- ************************************************************ -->
+          <!--
           {block:Text}
             <article class="container card" id="hjw-post-text">
               <div class="card-body">
                 {block:Title}<h4 class="card-title">{Title}</h4>{/block:Title}
                 <h6>{block:Date}{ShortMonth} {DayOfMonth}, {Year}{/block:Date}</h6>
                 <div class="card-text">{Body}</div>
+                -->
                 <!-- Add a card-footer and maybe a card-button -->
+                <!--
                 {block:HomePage}
                   {block:More}
                     <a href={Permalink}><div class="circle"></div></a>
                   {/block:More}
                 {/block:HomePage}
-              </div> <!-- end of bootstrap card -->
-            </article>
+              </div> --><!-- end of bootstrap card -->
+            <!-- </article>
           {/block:Text}
+          -->
           <!-- ************************************************************ -->
+          <!--
           {block:Photo}
             <article class="container bg-transparent" id="hjw-post-photo">
               <div class="row justify-content-center">
@@ -156,6 +196,7 @@
               </div>
             </article>
           {/block:Photo}
+          -->
           <!-- ************************************************************ -->
           <!--
           {block:Panorama}
@@ -198,12 +239,14 @@
           {/block:Photoset}
           -->
           <!-- ************************************************************ -->
+          <!--
           {block:Quote}
             <article id="hjw-post-quote">
               <em>"{Quote}"</em>
               {block:Source}<br>&mdash;{Source}{/block:Source}
             </article>
           {/block:Quote}
+          -->
           <!-- ************************************************************ -->
           <!--
           {block:Link}
@@ -274,11 +317,6 @@
           {/block:Answer}
           -->
           <!-- ************************************************************ -->
-        </section> <!-- posts section -->
-      {/block:Posts}
-      <footer>
-      </footer>
-    </div> <!-- content container -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
