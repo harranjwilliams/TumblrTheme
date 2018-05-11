@@ -44,6 +44,13 @@
     /* Empty space for testing */
     </style>
 
+    <!-- Media Element -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.9/mediaelement.min.js"></script>
+    <!-- Add any other renderers you need; see Use Renderers for more information -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.9/mediaelementplayer.min.css" />
+    <!-- https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.9/renderers/soundcloud.min.js -->
+    <!-- END Media Element -->
+
   </head>
   <body>
     <header class="hjw-header">
@@ -124,6 +131,7 @@
       <section class="hjw-posts">
         <div class="row">
           <div class="col-sm-12 col-md-4"> <!-- left column photo, audio, and video posts -->
+            <!-- ************************************************************ -->
             {block:Posts}
               {block:Photo}
                 <article class="container" id="hjw-post-photo">
@@ -135,6 +143,23 @@
                 </article>
               {/block:Photo}
             {/block:Posts}
+            <!-- ************************************************************ -->
+            {block:Posts}
+              {block:Audio}
+                <article class="container" id="hjw-post-audio">
+                  <div class="row justify-content-center">
+                    <div class="py-3">
+                      {block:ExternalAudio}<audio src={ExternalAudioURL}>Audio not supported</audio>{/block:ExternalAudio}
+                      <audio controls>
+                        <source src="horse.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                      </audio>
+                    </div>
+                  </div>
+                </article>
+              {/block:Audio}
+            {/block:Posts}
+            <!-- ************************************************************ -->
           </div> <!-- end left column -->
 
           <div class="col-sm-12 col-md-8"> <!-- right column text posts -->
