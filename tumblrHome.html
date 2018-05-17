@@ -130,9 +130,9 @@
     <div class="container">
       <section class="hjw-posts">
         <div class="row">
-          <div class="col-sm-12 col-md-4"> <!-- left column photo, audio, and video posts -->
-            <!-- ************************************************************ -->
+          <div class="col-sm-12 col-md-4"> <!-- left column photo, link, audio, and video posts -->
             {block:Posts}
+              <!-- ************************************************************ -->
               {block:Photo}
                 <article class="container" id="hjw-post-photo">
                   <div class="row justify-content-center">
@@ -142,22 +142,30 @@
                   </div>
                 </article>
               {/block:Photo}
-            {/block:Posts}
-            <!-- ************************************************************ -->
-            {block:Posts}
+              <!-- ************************************************************ -->
               {block:Audio}
                 <article class="container" id="hjw-post-audio">
                   <div class="row justify-content-center">
                     <div class="py-3">
-                      {block:ExternalAudio}<audio src={ExternalAudioURL}>Audio not supported</audio>{/block:ExternalAudio}
-                      <audio controls>
-                        <source src="horse.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                      </audio>
+                      {block:TrackName}{TrackName}{/block:TrackName}
+                      {block:Artist}<br>by {Artist}<br>{/block:Artist}
+                      {block:AudioPlayer}{AudioPlayer}{/block:AudioPlayer}
                     </div>
                   </div>
                 </article>
               {/block:Audio}
+              <!-- ************************************************************ -->
+              {block:Link}
+                <article  class="container" id="hjw-post-link">
+                  <div class="row justify-content-center">
+                    <div class="py-3">
+                      <a href="{URL}" {Target}>{Name}</a>
+                      {block:Thumbnail}{Thumbnail}{/block:Thumbnail}
+                      {block:Description}{Description}{/block:Description}
+                    </div>
+                  </div>
+                </article>
+              {/block:Link}
             {/block:Posts}
             <!-- ************************************************************ -->
           </div> <!-- end left column -->
@@ -178,50 +186,18 @@
                   </div> <!-- end card-body -->
                 </article>
               {/block:Text}
+
+              {block:Quote}
+                <article class="container-fluid" id="hjw-post-quote">
+                  <em>"{Quote}"</em>
+                  {block:Source}<br>&mdash;{Source}{/block:Source}
+                </article>
+              {/block:Quote}
             {/block:Posts}
           </div> <!-- end right column -->
         </div> <!-- end of row -->
       </section> <!-- posts section -->
     </div>
-          <!-- ************************************************************ -->
-          <!--
-          {block:Text}
-            <article class="container card" id="hjw-post-text">
-              <div class="card-body">
-                {block:Title}<h4 class="card-title">{Title}</h4>{/block:Title}
-                <h6>{block:Date}{ShortMonth} {DayOfMonth}, {Year}{/block:Date}</h6>
-                <div class="card-text">{Body}</div>
-                -->
-                <!-- Add a card-footer and maybe a card-button -->
-                <!--
-                {block:HomePage}
-                  {block:More}
-                    <a href={Permalink}><div class="circle"></div></a>
-                  {/block:More}
-                {/block:HomePage}
-              </div> --><!-- end of bootstrap card -->
-            <!-- </article>
-          {/block:Text}
-          -->
-          <!-- ************************************************************ -->
-          <!--
-          {block:Photo}
-            <article class="container bg-transparent" id="hjw-post-photo">
-              <div class="row justify-content-center">
-                <div class="py-3 pr-2">
-                  {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
-                </div>
-              </div>
-              <div class="row">
-                <div>
-                  {block:Caption}
-                    <p>{Caption}</p>
-                  {/block:Caption}
-                </div>
-              </div>
-            </article>
-          {/block:Photo}
-          -->
           <!-- ************************************************************ -->
           <!--
           {block:Panorama}
@@ -265,27 +241,6 @@
           -->
           <!-- ************************************************************ -->
           <!--
-          {block:Quote}
-            <article id="hjw-post-quote">
-              <em>"{Quote}"</em>
-              {block:Source}<br>&mdash;{Source}{/block:Source}
-            </article>
-          {/block:Quote}
-          -->
-          <!-- ************************************************************ -->
-          <!--
-          {block:Link}
-            <article  class="hjw-post">
-              <a href="{URL}" {Target}>{Name}</a>
-              {block:Thumbnail}
-                {Thumbnail}
-              {/block:Thumbnail}
-        			{block:Description}{Description}{/block:Description}
-            </article>
-          {/block:Link}
-          -->
-          <!-- ************************************************************ -->
-          <!--
           {block:Chat}
             <article>
               {block:Title}{Title}{/block:Title}
@@ -299,15 +254,6 @@
               </table>
             </article>
           {/block:Chat}
-          -->
-          <!-- ************************************************************ -->
-          <!--
-          {block:Audio}
-            <article>
-              {AudioPlayer}
-              {block:Caption}{Caption}{/block:Caption}
-            </article>
-          {/block:Audio}
           -->
           <!-- ************************************************************ -->
           <!--
