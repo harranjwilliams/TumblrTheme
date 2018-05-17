@@ -120,7 +120,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tumblr_audio_player {
-    width: 100%;
+  width: 100%;
+}
+
+.hjw-video-player {
+  width: 100%;
 }
 
 #hjw-post-text {
@@ -132,6 +136,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hjw-post-audio {
+  background-color: #0A4657;
+}
+
+#hjw-post-video {
   background-color: #0A4657;
 }
 
