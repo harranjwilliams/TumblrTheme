@@ -13,8 +13,8 @@
     <!-- Images for carousel
     Christian, Family, Drums, Keys, Sports
     -->
-    <meta name="image:Carousel1" content="http://static.tumblr.com/..."/>
-    <meta name="image:Carousel2" content="http://static.tumblr.com/..."/>
+    <meta name="image:Jumbotron1" content="http://static.tumblr.com/..."/>
+    <meta name="image:Jumbotron2" content="http://static.tumblr.com/..."/>
     <meta name="image:AboutMe" content="http://static.tumblr.com/..."/>
 
     <!-- Social media usernames
@@ -76,31 +76,23 @@
           <!-- Col 2 -->
           <div class="col">
             <nav class="navbar navbar-expand-sm justify-content-end ">
-              <a class="nav-link text-light" href="#">About Me</a>
+              <a class="nav-link text-light" href="/aboutme">About Me</a>
               <a class="nav-link text-light" href="#">Posts</a>
               <a class="nav-link text-light" href="#">Gear</a>
               <a class="nav-link text-light" href="#">Contact</a>
             </nav>
-          </div>
-          <!-- end col 2 -->
-        </div>
-        <!-- end row -->
-      </div>
-      <!-- end container -->
-    </header>
-    <!-- end hjw-header -->
+          </div><!-- end col 2 -->
+        </div><!-- end row -->
+      </div><!-- end container -->
+    </header><!-- end hjw-header -->
 
-    <section id="hjw-carousel" class="carousel slide" data-ride="carousel">
-      <div>
-        <div class="carouselView carousel-item active">
-          <img class="d-block w-100" src="{image:Carousel1}" alt="First slide">
-        </div>
-        <div class="carouselImage carousel-item">
-          <img class="d-block w-100" src="{image:Carousel2}" alt="Second slide">
-        </div>
-      </div>
-    </section>
-    <!-- end hjw-crousel -->
+    <section class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <div class="display-4">
+          <img src="{image:Jumbotron1}" alt="First slide">
+        </div><!-- end display-4 -->
+      </div><!-- end container -->
+    </section><!-- end jumbotron -->
 
     <section class="hjw-social-media">
       <div class="container">
@@ -125,112 +117,114 @@
               <a class="nav-link" href="http://pinterest.com/{text:Pinterest Username}"><span class="fa fa-pinterest-square px-1 text-light" aria-hidden="true"></span></a>
             {/block:IfPinterestUsername}
           </nav>
-        </div>
-        <!-- end row -->
-      </div>
-      <!-- end container -->
-    </section>
+        </div><!-- end row -->
+      </div><!-- end container -->
+    </section><!-- end hjw-social-media -->
 
-    <section class="hjw-about-me">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <div>
-              A Christian, husband, father, musician, with ADD who can program, route for the Oakland Raiders, Chicago Bulls, and Rutgers Scarlet Knights and listen to audio books while playing Homescapes in my down time.
-            </div>
-          </div>
-          <!-- end about me text -->
-          <div class="col-md-6 text-center">
-            <img src="{image:AboutMe}" class="img-about border rounded-circle" alt="About Me">
-          </div>
-          <!-- end about me image -->
-        </div>
-      </div>
-    </section>
-    <!-- end hjw-about-me section -->
+    <main>
+      {block:HomePage}
+        <section class="hjw-about-me">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <div>
+                  A Christian, husband, father, musician, with ADD who can program, route for the Oakland Raiders, Chicago Bulls, and Rutgers Scarlet Knights and listen to audio books while playing Homescapes in my down time.
+                </div>
+              </div><!-- end about me text -->
+              <div class="col-md-6 text-center">
+                <img src="{image:AboutMe}" class="img-about border rounded-circle" alt="About Me">
+              </div><!-- end about me image -->
+            </div><!-- end row -->
+          </div><!-- end container -->
+        </section><!-- end hjw-about-me -->
 
-    <div class="container">
-      <section class="hjw-posts">
-        <div class="row">
-          <div class="col-sm-12 col-md-4"> <!-- left column photo, link, audio, and video posts -->
-            {block:Posts}
-              <!-- ************************************************************ -->
-              {block:Photo}
-                <article class="container" id="hjw-post-photo">
-                  <div class="row justify-content-center">
-                    <div class="col py-3 text-center">
-                      {LinkOpenTag}<img class="img-fluid" src="{PhotoURL-250}" alt="{PhotoAlt}" />{LinkCloseTag}
-                    </div>
-                  </div>
-                </article>
-              {/block:Photo}
-              <!-- ************************************************************ -->
-              {block:Audio}
-                <article class="container" id="hjw-post-audio">
-                  <div class="row justify-content-center">
-                    <div class="col p-3">
-                      {block:TrackName}<h4>{TrackName}</h4>{/block:TrackName}
-                      {block:Artist}<h6>by {Artist}</h6>{/block:Artist}
-                      {block:AudioPlayer}{AudioPlayer}{/block:AudioPlayer}
-                    </div>
-                  </div>
-                </article>
-              {/block:Audio}
-              <!-- ************************************************************ -->
-              {block:Link}
-                <article  class="container" id="hjw-post-link">
-                  <div class="row">
-                    <div class="py-3">
-                      <a href="{URL}" {Target}>{Name}</a>
-                      {block:Thumbnail}{Thumbnail}{/block:Thumbnail}
-                      {block:Description}{Description}{/block:Description}
-                    </div>
-                  </div>
-                </article>
-              {/block:Link}
-              <!-- ************************************************************ -->
-              {block:Video}
-                <article class="container" id="hjw-post-video">
-                  <div class="row justify-content-center">
-                    <div class="col py-3">
-                      {VideoEmbed-400}
-                      {block:Caption}{Caption}{/block:Caption}
-                    </div>
-                  </div>
-                </article>
-              {/block:Video}
-            {/block:Posts}
+        <div class="container">
+          <section class="hjw-posts">
+            <div class="row">
+              <div class="col-sm-12 col-md-4"> <!-- left column photo, link, audio, and video posts -->
+                {block:Posts}
+                  <!-- ************************************************************ -->
+                  {block:Photo}
+                    <article class="container" id="hjw-post-photo">
+                      <div class="row justify-content-center">
+                        <div class="col py-3 text-center">
+                          {LinkOpenTag}<img class="img-fluid" src="{PhotoURL-250}" alt="{PhotoAlt}" />{LinkCloseTag}
+                        </div>
+                      </div>
+                    </article>
+                  {/block:Photo}
+                  <!-- ************************************************************ -->
+                  {block:Audio}
+                    <article class="container" id="hjw-post-audio">
+                      <div class="row justify-content-center">
+                        <div class="col p-3">
+                          {block:TrackName}<h4>{TrackName}</h4>{/block:TrackName}
+                          {block:Artist}<h6>by {Artist}</h6>{/block:Artist}
+                          {block:AudioPlayer}{AudioPlayer}{/block:AudioPlayer}
+                        </div>
+                      </div>
+                    </article>
+                  {/block:Audio}
+                  <!-- ************************************************************ -->
+                  {block:Link}
+                    <article  class="container" id="hjw-post-link">
+                      <div class="row">
+                        <div class="py-3">
+                          <a href="{URL}" {Target}>{Name}</a>
+                          {block:Thumbnail}{Thumbnail}{/block:Thumbnail}
+                          {block:Description}{Description}{/block:Description}
+                        </div>
+                      </div>
+                    </article>
+                  {/block:Link}
+                  <!-- ************************************************************ -->
+                  {block:Video}
+                    <article class="container" id="hjw-post-video">
+                      <div class="row justify-content-center">
+                        <div class="col py-3">
+                          {VideoEmbed-400}
+                          {block:Caption}{Caption}{/block:Caption}
+                        </div>
+                      </div>
+                    </article>
+                  {/block:Video}
+                {/block:Posts}
 
-          </div> <!-- end left column -->
+              </div> <!-- end left column -->
 
-          <div class="col-sm-12 col-md-8"> <!-- right column text posts -->
-            {block:Posts}
-              {block:Text}
-                <article class="container card" id="hjw-post-text">
-                  <div class="card-body">
-                    {block:Title}<h4 class="card-title">{Title}</h4>{/block:Title}
-                    {block:Date}<h6>{ShortMonth} {DayOfMonth}, {Year}</h6>{/block:Date}
-                    <div class="card-text">{Body}</div>
-                    {block:HomePage}
-                      {block:More}
-                        <a href={Permalink}>Continue Reading</a>
-                      {/block:More}
-                    {/block:HomePage}
-                  </div> <!-- end card-body -->
-                </article>
-              {/block:Text}
-              <!-- ************************************************************ -->
-              {block:Quote}
-                <article class="container-fluid" id="hjw-post-quote">
-                  <em>"{Quote}"</em>
-                  {block:Source}<br>&mdash;{Source}{/block:Source}
-                </article>
-              {/block:Quote}
-            {/block:Posts}
-          </div> <!-- end right column -->
-        </div> <!-- end of row -->
-      </section> <!-- posts section -->
-    </div>
+              <div class="col-sm-12 col-md-8"> <!-- right column text posts -->
+                {block:Posts}
+                  {block:Text}
+                    <article class="container card" id="hjw-post-text">
+                      <div class="card-body">
+                        {block:Title}<h4 class="card-title">{Title}</h4>{/block:Title}
+                        {block:Date}<h6>{ShortMonth} {DayOfMonth}, {Year}</h6>{/block:Date}
+                        <div class="card-text">{Body}</div>
+                        {block:HomePage}
+                          {block:More}
+                            <a href={Permalink}>Continue Reading</a>
+                          {/block:More}
+                        {/block:HomePage}
+                      </div> <!-- end card-body -->
+                    </article>
+                  {/block:Text}
+                  <!-- ************************************************************ -->
+                  {block:Quote}
+                    <article class="container-fluid" id="hjw-post-quote">
+                      <em>"{Quote}"</em>
+                      {block:Source}<br>&mdash;{Source}{/block:Source}
+                    </article>
+                  {/block:Quote}
+                {/block:Posts}
+              </div> <!-- end right column -->
+            </div> <!-- end of row -->
+          </section> <!-- posts section -->
+        </div><!-- end container -->
+      {/block:HomePage}
+
+      {block:HasPages}{block:Pages}{Label}{/block:Pages}{/block:HasPages}
+    </main>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
