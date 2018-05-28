@@ -86,13 +86,9 @@
       </div><!-- end container -->
     </header><!-- end hjw-header -->
 
-    <section class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <div class="display-4">
-          <img src="{image:Jumbotron1}" alt="First slide">
-        </div><!-- end display-4 -->
-      </div><!-- end container -->
-    </section><!-- end jumbotron -->
+    <section class="hjw-image-header">
+      <img class="img-fluid" src="{image:Jumbotron1}" alt="First slide">
+    </section><!-- end section-->
 
     <section class="hjw-social-media">
       <div class="container">
@@ -221,8 +217,17 @@
           </section> <!-- posts section -->
         </div><!-- end container -->
       {/block:HomePage}
-
-      {block:HasPages}{block:Pages}<h4>{Body}</h4>{/block:Pages}{/block:HasPages}
+      
+      <div> <!-- custom pages -->
+        {block:Posts}
+          {block:Text}
+            <article class="container card" id="hjw-post-text">
+              {block:Title}<h4>{Title}</h4>{/block:Title}
+               <div>{Body}</div>
+            </article>
+          {/block:Text}
+        {/block:Posts}
+      </div> <!-- end custom pages -->
     </main>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
