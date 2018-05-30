@@ -27,7 +27,7 @@
     <meta name="text:Twitter Username" content=""/>
     <meta name="text:YouTube Username" content=""/>
 
-    <title>{Title}</title>
+    <title>{Title}{block:PostTitle} - {PostTitle}{/block:PostTitle}</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -217,17 +217,21 @@
           </section> <!-- posts section -->
         </div><!-- end container -->
       {/block:HomePage}
-      
-      <div> <!-- custom pages -->
-        {block:Posts}
-          {block:Text}
-            <article class="container card" id="hjw-post-text">
-              {block:Title}<h4>{Title}</h4>{/block:Title}
-               <div>{Body}</div>
-            </article>
-          {/block:Text}
-        {/block:Posts}
-      </div> <!-- end custom pages -->
+
+      {block:PermalinkPage}
+        <div class="container"> <!-- custom pages -->
+          {block:Posts}
+            {block:Text}
+              <div class="row">
+                <div class="col">
+                  {block:Title}<h4>{Title}</h4>{/block:Title}
+                  <div>{Body}</div>
+               </div>
+              </div>
+            {/block:Text}
+          {/block:Posts}
+        </div> <!-- end custom pages -->
+      {/block:PermalinkPage}
     </main>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
