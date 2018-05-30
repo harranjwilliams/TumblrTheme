@@ -107,7 +107,7 @@
               <a class="nav-link" href="http://facebook.com/{text:Facebook Username}"><span class="fa fa-facebook-square px-1 text-light" aria-hidden="true"></span></a>
             {/block:IfFacebookUsername}
             {block:IfGoogleUsername}
-              <a class="nav-link" href="http://plus.google.com/{text:Google Username}"><span class="fa fa-google-plus-square px-1 text-light" aria-hidden="true"></span></a>
+              <a class="nav-link" href="http://plus.google.com/+{text:Google Username}"><span class="fa fa-google-plus-square px-1 text-light" aria-hidden="true"></span></a>
             {/block:IfGoogleUsername}
             {block:IfPinterestUsername}
               <a class="nav-link" href="http://pinterest.com/{text:Pinterest Username}"><span class="fa fa-pinterest-square px-1 text-light" aria-hidden="true"></span></a>
@@ -219,7 +219,7 @@
       {/block:HomePage}
 
       {block:PermalinkPage}
-        <div class="container"> <!-- custom pages -->
+        <div class="container"> <!-- permalink page -->
           {block:Posts}
             {block:Text}
               <div class="row">
@@ -230,7 +230,7 @@
               </div>
             {/block:Text}
           {/block:Posts}
-        </div> <!-- end custom pages -->
+        </div> <!-- end permalink page -->
       {/block:PermalinkPage}
     </main>
 
