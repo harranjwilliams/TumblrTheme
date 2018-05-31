@@ -76,10 +76,9 @@
           <!-- Col 2 -->
           <div class="col">
             <nav class="navbar navbar-expand-sm justify-content-end ">
-              <a class="nav-link text-light" href="/aboutme">About Me</a>
-              <a class="nav-link text-light" href="#">Posts</a>
-              <a class="nav-link text-light" href="#">Gear</a>
-              <a class="nav-link text-light" href="#">Contact</a>
+              <a class="nav-link text-light" href="/about">About</a>
+              <!-- <a class="nav-link text-light" href="#">Posts</a>
+              <a class="nav-link text-light" href="#">Contact</a> -->
             </nav>
           </div><!-- end col 2 -->
         </div><!-- end row -->
@@ -101,7 +100,7 @@
               <a class="nav-link" href="http://instagram.com/{text:Instagram Username}"><span class="fa fa-instagram px-1 text-light" aria-hidden="true"></span></a>
             {/block:IfInstagramUsername}
             {block:IfYouTubeUsername}
-              <a class="nav-link" href="http://youtube.com/channel/{text:YouTube Username}"><span class="fa fa-youtube-square px-1 text-light" aria-hidden="true"></span></a>
+              <a class="nav-link" href="http://youtube.com/user/{text:YouTube Username}"><span class="fa fa-youtube-square px-1 text-light" aria-hidden="true"></span></a>
             {/block:IfYouTubeUsername}
             {block:IfFacebookUsername}
               <a class="nav-link" href="http://facebook.com/{text:Facebook Username}"><span class="fa fa-facebook-square px-1 text-light" aria-hidden="true"></span></a>
@@ -224,7 +223,7 @@
             {block:Text}
               <div class="row">
                 <div class="col">
-                  {block:Title}<h4>{Title}</h4>{/block:Title}
+                  {block:Title}<h2>{Title}</h2>{/block:Title}
                   <div>{Body}</div>
                </div>
               </div>
