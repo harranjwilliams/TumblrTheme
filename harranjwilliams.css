@@ -111,11 +111,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hjw-post-quote {
-  display: table-cell;
-  width: 100vw;
-  height: 200px;
-  text-align: center;
-  vertical-align: middle;
+  display: grid;
+  margin: auto;
+  width: 100%;
+  height: 150px;
   border-top: 1px solid #F28A79;
   border-bottom: 1px solid #F28A79;
   font-size: 22px;

@@ -67,14 +67,16 @@
       <div class="container">
         <div class="row align-items-center">
           <!-- Col 1 -->
-          <div class="col">
-            <img class="avatar float-left pr-1" src="{PortraitURL-30}">
+          <div class="col-1">
+            <img class="avatar float-left pr-1 d-none d-sm-block" src="{PortraitURL-30}">
+          </div>
+          <div class="col-5">
             <h4><a class="text-light" href="{BlogURL}">{Title}</a></h4>
           </div>
           <!-- end col 1 -->
 
           <!-- Col 2 -->
-          <div class="col">
+          <div class="col-6">
             <nav class="navbar navbar-expand-sm justify-content-end ">
               <a class="nav-link text-light" href="/about">About</a>
               <!-- <a class="nav-link text-light" href="#">Posts</a>
@@ -206,8 +208,12 @@
                   <!-- ************************************************************ -->
                   {block:Quote}
                     <article class="container-fluid" id="hjw-post-quote">
-                      <em>"{Quote}"</em>
-                      {block:Source}<br>&mdash;{Source}{/block:Source}
+                      <div class="row align-items-center">
+                        <div class="col">
+                          <em>"{Quote}"</em>
+                          {block:Source}<br>&mdash;{Source}{/block:Source}
+                        </div>
+                      </div>
                     </article>
                   {/block:Quote}
                 {/block:Posts}
