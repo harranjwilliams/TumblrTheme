@@ -204,7 +204,7 @@
                   {/block:Text}
                   <!-- ************************************************************ -->
                   {block:Quote}
-                    <article class="container-fluid" id="hjw-post-quote">
+                    <article class="container-fluid my-4" id="hjw-post-quote">
                       <div class="row align-items-center">
                         <div class="col">
                           <em>"{Quote}"</em>
@@ -217,6 +217,14 @@
               </div> <!-- end right column -->
             </div> <!-- end of row -->
           </section> <!-- posts section -->
+
+          {block:Pagination}
+            <div class="row">
+              <div class="col text-right text-uppercase">{block:PreviousPage}<a href="{PreviousPage}">Previous</a>{/block:PreviousPage}</div>
+              <div class="col text-uppercase">{block:NextPage}<a href="{NextPage}">Next</a>{/block:NextPage}</div>
+            </div>
+          {/block:Pagination}
+
         </div><!-- end container -->
       {/block:HomePage}
 
